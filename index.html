@@ -14,10 +14,39 @@ details[open] summary{border-bottom:1px solid var(--line)}
 .doc p{margin:6px 0}.doc ul,.doc ol{margin:6px 0;padding-left:22px}.doc li{margin:3px 0}
 .doc code{background:var(--bg);padding:1px 5px;border-radius:5px;font-size:14px}
 .pend{color:var(--sub);font-style:italic}footer{text-align:center;color:var(--sub);font-size:13px;padding-bottom:40px}
+.nuevo{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:24px 0}
+.nuevo h2{margin:0 0 8px}
+.nuevo p{margin:6px 0;color:var(--sub);font-size:14px}
+.nuevo .fila{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.nuevo select,.nuevo input{flex:1;min-width:180px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+.nuevo button{padding:8px 14px;border:0;border-radius:8px;background:var(--acc);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.nuevo button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+.nuevo code{display:block;background:var(--bg);border-radius:8px;padding:8px 10px;font-size:14px;word-break:break-all}
 </style></head><body>
 <header><h1>bakugan-class</h1><p>Clases UNIMINUTO — transcripción, notas, foros y prompts</p>
-<p>Generado 12-Nov-2026 · 8/8 clases transcritas · 4 documentos</p></header>
+<p>Generado 15-Nov-2026 · 8/8 clases transcritas · 12 documentos</p></header>
 <main>
+
+<div class="nuevo">
+<h2>➕ Nueva clase</h2>
+<p>Pega el link de la grabación (Zoom), elige la materia y pulsa <strong>Copiar línea</strong>.
+Luego pega esa línea en <code>links.txt</code> de GitHub (el botón lo abre) y guarda:
+el robot la transcribe y la web se actualiza sola.</p>
+<div class="fila">
+<select id="cls"><option value="ingles">Inglés</option><option value="ntec">Nuevas Tecnologías</option><option value="hack">Ethical Hacking</option></select>
+<input id="url" type="text" placeholder="https://us02web.zoom.us/rec/play/..." oninput="linea()">
+</div>
+<code id="salida">—</code>
+<div class="fila">
+<button onclick="copiar()">📋 Copiar línea</button>
+<button class="sec" onclick="window.open('https://github.com/ariasbrandon442-cmyk/bakugan-cloud/edit/main/links.txt','_blank')">Abrir links.txt en GitHub ↗</button>
+</div>
+</div>
+<script>
+function linea(){var c=document.getElementById('cls').value,u=document.getElementById('url').value.trim();document.getElementById('salida').textContent=(u?c+'|'+u:'—')}
+function copiar(){var t=document.getElementById('salida').textContent;if(t==='—')return;navigator.clipboard.writeText(t)}
+</script>
+
 <h2>Inglés A2</h2>
 <details open><summary>Inglés A2 — 20 oct 2026</summary>
 <div class="doc"><h3>Minuto 0-5</h3>
@@ -4996,6 +5025,75 @@ details[open] summary{border-bottom:1px solid var(--line)}
 <p>libro porque no tengo acceso a los PDFs; si la rúbrica pide cita textual,</p>
 <p>hay que abrir el libro del aula y extraerla.</p></div>
 </details>
+<details open><summary>Notas de clase — Inglés 20 oct</summary>
+<div class="doc"><h3>Clase Inglés A2 (NRC-70758) — 20-oct-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_ingles_20261020.md). Calidad alta; corregí errores obvios de texto.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Repaso de la plataforma (Open Class):</strong> 7 sesiones agendadas todos los martes, desde hoy hasta el 1 de diciembre. En "calificaciones" se ven las actividades por entregar y hay opción de "puntos extra" ("Eso les permite como subir o promediar un poco la nota").</li>
+<li><strong>Foros de discusión:</strong> el de acuerdos pedagógicos (verlo primero), el de presentación y el de dudas. "Les ruego por favor las aborden antes de las clases... porque lo ideal es que la clase sea participativa, interactiva". Foro de presentación: "lo ideal es que podamos hacerlo en inglés o si no en español". Asesorías virtuales opcionales los jueves a las 5.</li>
+<li><strong>Reglas de entrega:</strong> revisar el calendario y entregar las actividades antes o el mismo día del vencimiento; con excusa notificada se re-habilitan. "Lo que no vamos a hacer es publicar actividades individuales en los foros o entregar actividades por correo o por bandeja de entrada. Las actividades deben quedar cargadas en su respectivo espacio."</li>
+<li><strong>Temas de la sesión:</strong> saludos y cómo presentarse, dentro del contexto de rentar un carro [~]; países, nacionalidades, empleos, alfabeto, números y saludos ("Vamos a practicar y producir con este contenido").</li>
+<li><strong>Vocabulario de saludos:</strong> hello / hi; good morning, good afternoon, good evening; good night solo "cuando ya se van a dormir" (si siguen despiertos, good evening; good afternoon después del almuerzo; "morning" solo es muy informal y exclusivo de la mañana). Despedidas: goodbye, bye, see you, see you later, have a good afternoon.</li>
+<li><strong>Práctica 1 (micrófono):</strong> el profesor hizo del "chico de azul" y los estudiantes de la "chica de amarillo"; primero pronunciación, después contexto. Participó Cristian. Frases: "Nice to meet you" → respuesta "Nice to meet you, too"; "How are you?" → "I'm fine, thanks. And you?"; por grupo, "We are fine, thanks".</li>
+<li><strong>Registro informal:</strong> "How is it going?" sería como el "¿qué hubo?" / "¿cómo va?" — "el whatsapp es un poco más urbano, más directo". Clave al interactuar con alguien que no habla español: "Que hagamos el intento" (pueden responder "sorry, I don't speak Spanish").</li>
+<li><strong>Presentarse:</strong> "I am Oliver" / "My name's Oliver" / "My name is Oliver"; en una llamada sin cámara: "It's Oliver". Truco: "un truco para que se aprendan nombres, repetirlo tres veces".</li>
+<li><strong>Actividad en salas (breakout):</strong> "Van a tomar este mismo vocabulario y se van a conocer ustedes... Van a tener cinco minutos para que ustedes se conozcan. Pongan una foto de ustedes o activen cámara." Se repitió una segunda ronda de 5 minutos con las preguntas para conocerse mejor.</li>
+<li><strong>Useful Sentences for Introductions:</strong> "My name is Oliver. I am from Colombia, Bogotá. I am Colombian. I am a teacher. Nice to meet you." Preguntas: What's your name? Where are you from? What's your nationality? What do you do? / What's your profession?</li>
+<li><strong>Juego del alfabeto con empleos (jobs):</strong> por rondas, dadas las vocales (A, E, I, O, U) se iban pidiendo letras para formar empleos: teacher, artist, hairdresser, dishwasher [~la transcripción dice primero "fishwasher"], computer technician, cashier, waiter ("el femenino es waitress... no es común en inglés distinguir el masculino y el femenino, casi siempre son unisex"), electrician.</li>
+<li><strong>Preguntas en 1ª y 3ª persona:</strong> What's my name? Where am I from? What's my nationality? What do I do? / What's my job? / What's my profession? Luego con fotos: What's his name? Where is he from? What does he do? (Carlos, de México, estudiante; Alex [~], de Egipto, teacher; ella, doctor). Regla: "siempre usamos el is con he, she o con it".</li>
+<li><strong>Cortesía:</strong> si alguien dice "thanks", lo regular es responder "you're welcome" (también "no worries" / "don't worry").</li>
+<li><strong>Alfabeto y spelling:</strong> vowels (A, E, I, O, U) y consonants; la Z puede decirse "zee" o "zed". "How do you spell...?" con ejemplos: Oliver, Castellanos ("my surname"), teacher, cashier, computer technician. Letras que confunden: A, I, E — "recordemos que tienen doble sonido" (ejemplos: Apple, elephant). Diptongos: "cuando se unen dos vocales" (teacher).</li>
+<li><strong>Nacionalidades e idiomas:</strong> Colombia→Colombian→Spanish; Brazil→Brazilian→Portuguese; USA→American→English; Canada→Canadian→English and French; the UK→British→English; Germany→German→German and English; China→Chinese→Chinese; Australia→Australian→English. Pregunta nueva: "What language do you speak?" (el profe: "I speak English and Spanish and I am learning German"). Mezclas de idiomas: Spanglish, Franglish [~la transcripción dice "Franklish"], Denglish (alemán+inglés) y el Creole ("mezcla de francés, español e inglés, que se habla en las islas"). Aclaración: el inglés británico es "la raíz del idioma"; el americano y el australiano son variantes (como el español de Colombia vs. el de España o Argentina).</li>
+<li><strong>Práctica final — tarjeta de renta de carro (dramatización):</strong> "vamos a hacer la dramatización... uno de ustedes va a ser Ana María y otro de ustedes va a ser la persona que le va a rentar el carro". Faltaban nationality y phone number. Teléfono: "decimos plus, so plus five seven"; mejor "número por número" y con dígitos dobles "decimos double". Email: "el punto decimos dot y el arroba decimos at" → "ana.torres at uniminuto dot edu dot com".</li>
+<li><strong>Reto de cierre:</strong> un video del que hay que tomar los datos de una persona (nombre, apellido, nacionalidad, dirección 29 Elmore Road Bristol, código BS13 6QT, móvil 07969 831 016, casa 0117 480 6544, email paul99 at webmail dot com); las preguntas quedan en el foro 2 y con ese reto "continuamos en la siguiente sesión de clase".</li>
+</ol>
+<h3>Actividades que dejó el profesor</h3>
+<ol>
+<li><strong>Reto con video (Foro 2):</strong> tomar la información del video (link dejado en el chat y en el foro "por quienes vean la respectiva grabación") y responder 5 preguntas: What's his name? / What's his surname? / What's his nationality? / What's his home address? / What's his mobile phone number?. Cita: "les voy a dejar un reto y basado en ese reto continuamos en la siguiente sesión de clase" [1212-1214]; "las cinco primeras basadas en este video y yo les dejo el reto de nuevo en el foro 2, listos, para que practiquemos, lo exploren" [1275-1277]. Sin fecha específica: es para la próxima sesión (martes).</li>
+<li><strong>APP pedida: "Sounds Right"</strong> (aplicación del consulado británico / British Council, para practicar los sonidos y diptongos). Cita: "Hay una aplicación que se llama Sounds Right... aparece en sus celulares... Y es del consulado británico. Es para practicar los sonidos" [987-992]; al cierre reiteró: "les voy a dejar el link del primer tip que les di que fue descargar la aplicación que se llama Sounds Right" [1278-1279]. El link quedó en el chat.</li>
+<li><strong>APP pedida: "Johnny Grammar"</strong> (segunda aplicación para descargar; en la transcripción aparece dicho dos veces "Johnny Johnny Grammar" [1282-1284]). Cita: "y los invito a otra aplicación que se llama Johnny Grammar y yo les dejo el link también para que la puedan descargar" [1280-1286].</li>
+<li><strong>Foros pendientes:</strong> abordar el foro de acuerdos pedagógicos antes de las clases y participar en el foro de presentación ("lo ideal es que podamos hacerlo en inglés o si no en español"); lo muy general en el Foro de Dudas, lo individual por bandeja de entrada o correo.</li>
+<li><strong>Modalidad de evaluación (recordatorio):</strong> "creo que les aparece dos, la MA y la MI [~]. La diferencia es que una la evalúo y la otra sí es automática... Pero sí deben escoger una modalidad" [1329-1332].</li>
+<li>Asesorías virtuales opcionales los jueves a las 5 (recordatorio, no es tarea).</li>
+</ol></div>
+</details>
+<details open><summary>Notas de clase — Inglés 27 oct (app LingoClip)</summary>
+<div class="doc"><h3>Clase Inglés A2 (NRC-70758) — 27-oct-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_ingles_20261027.md). Calidad alta; corregí errores obvios de texto.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Repaso del video de personal information (clase anterior).</strong> El profesor dijo: "recordemos que estamos viendo countries, languages and nationalities, también vimos jobs y finalmente vimos personal information", y volvieron a escuchar el video en que un cliente alquila un carro y da sus datos personales (apellido del video deletreado W-H-A-T-L-I-N-G, pronunciado "Wathlin" [~]; nombre Paul; británico).</li>
+<li><strong>Preguntas de personal information repasadas una por una:</strong> What's his surname? / What's his first name? (Paul) / What's his nationality? (British) / What's his home address? (29 Elmore Road, Bristol) / What's his postcode? (BS13 6QT) / What's his mobile phone number? (07969 831016) / What's his home phone number? (0117 480 6544) / What's his email address? (paul99). Sobre el email aclaró: "Recordemos que el arroba lo decimos como at. Y el punto lo decimos como dot", y con números dobles se puede decir "double".</li>
+<li><strong>Lista final de preguntas para conversar:</strong> what's your surname, what's your first name, what's your nationality, what's your postcode, what's your mobile phone number, what's your home phone number, what's your email address. Diferencia registrada: "cell phone es como más americano… mobile es más británico, pero es lo mismo".</li>
+<li><strong>Salas pequeñas para conocerse (primer breakout).</strong> Instrucción textual: "Entonces, van a escoger dos de ahí… y van a conocer a sus compañeros… recuerden, traten de subir una foto… 5 minutos, escojan… se van a ir a dos salas diferentes y escojan dos preguntas para que se conozcan".</li>
+<li><strong>Proyecto del curso: planear un viaje progresivamente.</strong> "Esta planeación de viaje la vamos a hacer progresivamente, vamos a seleccionar unos de esos destinos y a medida que vamos avanzando vamos a ir adaptando el vocabulario". "Les voy a dar el vocabulario".</li>
+<li><strong>Vocabulario American vs British (juego de video, 3 rondas).</strong> Regla textual: "solo vamos a usar la primera que nos aparece en la parte izquierda, que es la pronunciación o palabras americanas". Ronda 1 (10): tomato, water, coffee, dog, shark, zebra, vase, castle, missile [~] (transcrito "misil"). Ronda 2 (9): chips, pants/trousers, underwear/undies, sweater/jumper, flashlight/torch, sneakers, candy. Ronda 3 (9): moustache, airplane, pajamas, color, aluminum, jewelry, tire, check, gray. Comentarios: el americano "tiende a ser un poco más estandarizado", y de los acentos "es más complejo el australiano".</li>
+<li><strong>Práctica 1 — viaje por Colombia (semana 1).</strong> "Vamos a planear un viaje por cualquier ciudad de Colombia… vamos a escoger una ciudad. Y qué van a comer en esa ciudad, qué van a tomar en esa ciudad". Primer destino: "va a ser Colombia".</li>
+<li><strong>Vocabulario de acciones conectado con Colombia:</strong> drink coffee ("I drink Huilense coffee"; café del Huila y de Timbío, Cauca [~] transcrito "Timbi of Cauca"); sleep ("what do you wear to sleep" → pajamas); clothes/close ("you close the window at night"; repaso in the morning / in the afternoon / at night); WC ("how many times at night do you go to the WC?"; vale WC, bathroom o restroom); stand up on the airplane ("when it lands" [~] transcrito "when it landing" y "when I go to the WC").</li>
+<li><strong>Punt de gramática: on vs in con vehículos.</strong> "Si usamos on es porque el vehículo nos podemos mover y si usamos in… es porque no podemos caminar": on the airplane, in the taxi.</li>
+<li><strong>Plan de la semana 1 (Colombia) y necesidades.</strong> Planes leídos por estudiantes: "We are driving our rental car. We are visiting Bogotá, Medellín, and Cartagena. We are exploring the city. We are taking photos." Necesidades en inglés: "we need to hire a car" (también "we hire a car" o "we rent a car": "el lenguaje es versátil"), an airplane or a ticket, some money, a map (Google Maps), clothes, sneakers, a hotel, "we need an Airbnb… o también podemos usar we need a couch surfing, que es otra aplicación" [~] (transcrito "couch surfing"); para fotos: camera o cell phone.</li>
+<li><strong>Emergencias y supervivencia (juego).</strong> "We need a bottle of water", "flashlight"; de los alimentos vistos, cuál permite sobrevivir: "bananas… bastante potasio… and cookies, we can do it".</li>
+<li><strong>Verbos complementarios:</strong> like ("I like Colombian candies", "I like sancocho and empanadas" [~] transcrito "pancocho", ayacas/tungos del Casanare, tamales); interpret ("I interpret Spanglish", "I interpret some English American words"); check (también verbo, asociado al español "checar/chequear": "check the apples and bananas"); work ("where do you work?" → "I work on an airplane", "in the university", "in a call center", "in a school"). Nota cultural del profesor: "sneakers es compleja… yo siempre usaba runners, pero runners es más británico y americano es sneakers; en nuestro contexto decimos tenis, pero tenis es un deporte".</li>
+<li><strong>Segundo breakout — semana 2: Panamá.</strong> "Van a escoger un contexto, el contexto es flying o exploring, visiting o trying… Escojan solo uno. Vamos a trabajar en dos grupos y cuando volvamos van a compartir qué planearon". Al volver compartieron: "we are flying to Panama", "we explore the beaches in Panama", "I want to buy candies and products… no taxes", "so we eat rice with chicken", sancocho panameño de gallina con ñame, carimañolas de yuca rellenas de carne, ropa vieja (carne desmechada) con huevo frito, ketchup.</li>
+<li><strong>Vocabulario de aeropuerto (5 imágenes).</strong> "We are checking in, we are showing our passport, we are checking our luggage, we are getting our boarding pass, and we are waiting at the gate".</li>
+<li><strong>Diálogo agent–passenger (práctica de roles).</strong> Texto base: "Agent: Good morning. Can I see your passport? / Yes, here it is. / Are you flying to Panama? / Yes, we are flying with Avianca to Panama City. / Here is your boarding pass. / Thank you." Dos voluntarias lo representaron y el profesor corrigió: "lo cambiaste un poco".</li>
+<li><strong>Ejercicio de completar con imágenes.</strong> Frases completadas: "We are going to check in at the airport" [~], "we are checking our luggage", "here's my passport", "we are getting our boarding pass", "we are waiting at the gate".</li>
+<li><strong>Gramática: present progressive / present continuous para PLANEAR.</strong> Regla textual: "Siempre que nosotros vamos a planear, la fórmula va a ser verbo to be y los verbos los trabajamos ing". Ejemplos: "I am working on a computer later", "I'm eating breakfast tomorrow morning", "I am having a meeting tomorrow at noon". Aclaración clave ante una estudiante (la tarea pedía describir un viaje ya hecho): "No lo mencionemos del pasado, mencionémoslo de algo que vas a planear… puede que la instrucción diga un viaje que hicimos, pero no tiene sentido porque eso ya es pasado; es un viaje que vamos a hacer, ahí es donde vamos a planear". Ejemplo: "I'm going to visit Melgar" o "I am traveling to Melgar"; "si usan going to o si usan ing, cualquiera de las dos está bien".</li>
+<li><strong>Foros (plataforma).</strong> Los grupos los genera el sistema "de a 5" para los foros; se consultan en la página de inicio, sección "equipos de trabajo" [~]. Dinámica: si alguien del grupo publicó, respóndele; "pero al menos debo hacer la apertura, si ninguna de ellas ha empezado, pues yo abro el foro". Criterio: "recuerden, no es tanto cantidad sino calidad", seguir las instrucciones del foro y "recuerden revisar la rúbrica de evaluación".</li>
+<li><strong>Modalidad de evaluación supervisada (preguntas de estudiantes).</strong> "Es necesario que descarguen el programa… deben tener en cuenta las instrucciones", porque hay exámenes anulados en otros cursos por "no prendieron cámara o desviaron la cámara". "La IA te pide que enciendas la cámara y empieza a tomar fotos… es supervisado por la IA". Cantidad: "regularmente son de 5 a 10" preguntas; el tiempo lo habilita la plataforma ("eso no lo tengo en conocimiento"). Consejo: "traten de estar en un lugar tranquilo, que puedan encender la cámara".</li>
+<li><strong>Logística Open Class y asesorías.</strong> Ingreso desde "la parte izquierda donde dice Open Class… acá les aparecen las del día" (no entrar a sesiones viejas, p. ej. la del 17); el link también queda en el "foro pedagógico". Las Open Class son "los martes… a las 5 y 30"; si no se pueden conectar, "las ven en diferido". Asesorías opcionales: "los jueves a las 5 de la tarde". Dudas: por mensaje directo, y si la pregunta sirve a todos se publica en el Foro de Dudas.</li>
+<li><strong>Avance del proyecto y cierre.</strong> El itinerario quedó en Panamá: "de Panamá nos vamos a mover a Estados Unidos. Esto lo vamos a desarrollar en la siguiente sesión". Despedida: "thank you for your time".</li>
+</ol>
+<h3>Actividades que dejó el profesor</h3>
+<ol>
+<li><strong>Reto (challenge) de la semana, publicado en el foro.</strong> Cita textual: "El reto es que llegando a Canadá, a ustedes les van a cancelar el Airbnb. Entonces, ¿qué van a hacer? ¿Qué van a planear? ¿Cómo van a solucionar? ¿Cuál va a ser esa solución?… entonces piensen individualmente o en grupo qué soluciones, cuando lleguemos a Canadá". Contexto del reto: son un grupo de 11-12 viajeros ya en medio del viaje (Panamá → EE. UU. → Canadá) y el dinero cancelado queda reembolsado "ya cargado en Airbnb"; con ese reto inicia la siguiente sesión. Confirmación: "si, si ya les voy a pasar el challenge de hoy y se los dejo en el foro".</li>
+<li><strong>Explorar una aplicación: LingoClip.</strong> Cita textual: "les voy a dejar una aplicación, si tienen tiempo, para que la exploren, para que jueguen, la siguiente clase la vamos a incrustar dentro de la misma, para que me den sus opiniones y espero que ya la hayan usado… es una aplicación muy muy buena, se llama Lingo, Lingo App, Lingo Clip, y en esta aplicación pueden practicar con música, entonces pueden escoger la canción que a ustedes les guste y de acuerdo a la canción pues vamos practicando inglés". (Nombre tal como se oyó en la transcripción: "Lingo / Lingo App / Lingo Clip"; la app real para practicar inglés con canciones se llama LingoClip [~].)</li>
+<li><strong>Actividad de la semana 2 (en curso, aclarada en clase).</strong> La entrega depende de la modalidad: "dependiendo de la modalidad, cada uno tiene una entrega diferente". Para la modalidad de actividades es una descripción de viaje en presente continuo ("yo leí como la tarea que había que hacer, pero dice que en presente continuo hay que hacer una descripción de un viaje"), que el profesor aclaró debe enfocarse en planear (futuro con to be + -ing), y ofrezcó revisarla por chat o mensaje: "si lo puedes enviar acá en el chat o me lo envías por mensajería instantánea, yo te respondo".</li>
+<li><strong>Foros en curso.</strong> Mantener la secuencia del grupo asignado por el sistema (grupos de 5): publicar y responder a los compañeros del grupo según las instrucciones y la rúbrica del foro; si nadie del grupo ha publicado, el primero abre el foro.</li>
+<li><strong>Asesorías opcionales.</strong> "Puedes acceder a las asesorías que son los jueves a las 5" de la tarde, o escribirle al profesor por mensajería; las Open Class de los martes 5:30 se pueden ver en diferido y luego enviar dudas.</li>
+</ol></div>
+</details>
 <details open><summary>Notas de clase — Inglés 3 nov</summary>
 <div class="doc"><h3>Clase Inglés A2 (NRC-70758) — 03-nov-2026</h3>
 <p>Fuente: transcripción local whisper (clase_full.srt, 93 min). Ojo: el modelo</p>
@@ -5055,7 +5153,7 @@ details[open] summary{border-bottom:1px solid var(--line)}
 <p>clase anterior [~] (nombre NO audible en la transcripción; revisar en</p>
 <p>el aula). Explorarla y avisar; luego asignará algo extra sobre ella.</p></div>
 </details>
-<details open><summary>Prompt — Reto “solo en Canadá” (Inglés)</summary>
+<details open><summary>Prompt — Reto "solo en Canadá" (Inglés)</summary>
 <div class="doc"><h3>Prompt IA — Reto "solo en Canadá" (Inglés A2, 03-nov-2026)</h3>
 <p>Nivel del estudiante: <strong>A2</strong> (oraciones simples, vocabulario del curso</p>
 <p>de viaje/rutina). Solo usa la lista de vocabulario de abajo si aplica.</p>
@@ -5116,6 +5214,30 @@ details[open] summary{border-bottom:1px solid var(--line)}
 <p>rutina diaria y comentar en el foro cuál llamó más la atención) y una</p>
 <p>tarea de explorar una app; el nombre no quedó claro en el audio →</p>
 <p>revisar el aula antes del foro.</p></div>
+</details>
+<details open><summary>Entrega — Reto "solo en Canadá" (Inglés)</summary>
+<div class="doc"><h3>Entrega: Reto "Solo en Canadá" (Inglés A2, NRC-70758) — 15-nov-2026</h3>
+<ul>
+<li>Word entregable generado: <code>C:\Users\brand\Downloads\Brandon_Garcia_Arias_Reto_Solo_en_Canada.docx</code></li>
+</ul>
+<p>(verificado: título + encabezado nombre/NRC/fecha/profesor + bloques A y B).</p>
+<ul>
+<li>Ciudad escogida: <strong>Vancouver</strong> (invierno ~0 °C). Actividad: caminar en</li>
+</ul>
+<p>Stanley Park + café, SOLO.</p>
+<ul>
+<li>Bloque A: 6 oraciones (1-4 presente progresivo, 5-6 presente simple) con</li>
+</ul>
+<p>traducción al español al lado.</p>
+<ul>
+<li>Bloque B: guion de video 60-90 s (11 líneas inglés A2 + traducción para</li>
+</ul>
+<p>ensayar). El VIDEO lo graba el usuario (no lo puede generar la IA).</p>
+<ul>
+<li>Falta por parte del usuario: grabar el video y (si aplica) subir al aula.</li>
+<li>Nota: NO confundir con "Camino_de_aventura_*.docx" (actividad del 2-nov,</li>
+</ul>
+<p>preposiciones/lugares — entregada aparte).</p></div>
 </details>
 <h2>Nuevas Tecnologías</h2>
 <details open><summary>Nuevas Tecnologías — 30 oct 2026</summary>
@@ -10092,6 +10214,181 @@ details[open] summary{border-bottom:1px solid var(--line)}
 <p>textuales con página, hay que abrir esos PDFs y extraer la cita antes de</p>
 <p>publicar.</p></div>
 </details>
+<details open><summary>Notas de clase — Nuevas Tec 30 oct</summary>
+<div class="doc"><h3>Clase Nuevas Tecnologías de Desarrollo (NRC 70121) — 30-oct-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_ntec_20261030.md). Calidad alta; corregí errores obvios de texto.</p>
+<p>Notación: [~] = pasaje ininteligible o dudoso en el audio; a continuación va la reconstrucción más plausible. Nada se inventó: las citas son textuales de la transcripción.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Bienvenida y presentación del docente.</strong> Richard Eliseo Mendoza Gáfaro se presenta como ingeniero de sistemas de profesión [~ "el dinero de sistema de profesión"], "Especial[ista]... elista magistr en gestión de proyectos informáticos" [~ especialista y magíster en gestión de proyectos informáticos], y dice estar terminando dos doctorados [~], uno con la [Universidad de Pamplona ~ "la nitria de Pamplona"] y otro con una universidad [española ~ "una universidad de la semana"].</li>
+<li><strong>Estructura del curso (8 sesiones [~]).</strong> "en las [ovenclas ~] están las ocho sesiones... pero esta cuenta como la primera": es la primera clase del semestre (hubo "un inconveniente con la cuenta... de la plataforma"). Anuncia que trabajará "un poquito de la sesión uno en esta clase... me toca recuperarla" [~]. Recorrido de semanas: semana 1 "el panorama de [Saruduadmar ~]"; semana 2 "el desarrollo de este tiempo por Internet. inteligencia artificial" con el "fundamento de SDD [~ CDD]", que describe como "una nueva metodología... para el desarrollo asistido con inteligencia [artificial ~]... development, driving [~]"; sesión 3 arquitecturas modernas: "acá se habla de de los microservicios y de las apps"; semana 4 backend con "contena deores [~ contenedores] y orquestación", trabajando "con doctor [~ Docker]" y mencionando [Kubernetes ~ "cover nets"]; computación en la nube ([AWS ~ "clove"], Google Cloud) y "los fundamentos de días, el paz, el sass" [~ IaaS, PaaS, SaaS]; DevOps con "el despliegue continuo y las pruebas automatizadas".</li>
+<li><strong>Proyecto del curso.</strong> "vamos a hacer un proyecto de desarrollo utilizando la metodología y la vamos a hacer un display [~ despliegue] de un utilizando Bersel [~ Vercel], Netflix" [~] (proyecto tipo Netflix).</li>
+<li><strong>Método de evaluación.</strong> "la volación [~ evaluación] por actividad, ustedes... en la foto [~ foro] de discusión las tareas sí los entregables" y "un por trabajo final" [~]; dijo "vamos a mostrar los porcentajes" (los números no se distinguen en el audio).</li>
+<li><strong>Semana 1 — panorama de frameworks [~ "framboards"].</strong> Con la IA "muchos de los desarrollos a veces quieren orientarse" [~]; menciona PHP [~ "pechipen"] y que "casi como el 80%" [~] de lo reciente se relacionó "con las ataques de seguridad a ciertas plataformas"; las capas actuales: "tenemos los IPAs [~ las APIs], el backing [~ backend] y la nueva [~ nube]" ("todas las aplicaciones las tenemos en la nube").</li>
+<li><strong>Resultados de aprendizaje.</strong> Hard skills y otros skills: "identifica las tecnologías, las arquitecturas, las tendencias actuales de desarrollo de web y su papel en la construcción de aplicaciones modernas" y "analiza el impacto de los inscientes [~ incidentes] de seguridad reales sobre el desarrollo de software"; anuncia una palabra clave: "la especificación" [~].</li>
+<li><strong>¿Quién es responsable de la seguridad?</strong> Pregunta al grupo: "primero quién es responsable. el lenguaje, el desarrollador o la empresa". En la discusión se concluye que la empresa termina siendo la responsable [~]; el docente: "la lógica de la programación y esta borde a cualquier lengua [~ trasciende a cualquier lenguaje]" (él aprendió "más de 10 lenguajes"); hay que estar pendiente de los "parches" de seguridad (ejemplo con PHP [~ "lengua HPHCP"]): ya había parche "pero el administrador de la red... pues simplemente no la sabía hecho".</li>
+<li><strong>Casos de incidentes reales citados.</strong> PlayStation: tras acabar el formato físico "empezaron a hacer diferentes ataques", a "clonar" juegos y a "saltarse esos controles de seguridad" de la consola; "la primera ministra de Japón" [~] salió a hablar públicamente del tema [~], caso que involucró también a Francia y Estados Unidos [~]; un ataque que "tras exponer 320 millones... 810 cuentas" [~] y "de 50 millones le pieron [~ pidieron] un rescate" (mecánica ransomware: extraer, comprimir, encriptar y cobrar); una empresa [~ "EYO Core"] "fue paralizada por un tema de Rasa World [~ ransomware]"; y un caso [~] donde "se reveló información" con reporte a OpenAI [~], detectado por las conversaciones que la plataforma guarda [~].</li>
+<li><strong>Ciberseguridad como oportunidad laboral.</strong> "falta muchos expertos en ciberso [~ ciber]seguridad, porque todas las organizaciones... van a requerir"; menciona intranets [~] de bancos que no requieren conectarse a internet; seguridad de la nube: durante la pandemia "se volvieron el hombre más rico del mundo" (Bezos [~]), visionario de la nube desde 2002 [~], y "Amazon... recibe mayor dinero por concepto de los servicios que ofrecen en la [nube ~]... la joya de la corona"; conclusión: "ya uno no tiene que especializarse en una única nube si no tiene que ir. Esplorar [~ explorar], expandir".</li>
+<li><strong>IA aplicada a ataques y defensas.</strong> La IA viene a "automatizar el reconocimiento, fichin [~ fingerprinting], esplota [~ explotación] de errores"; advierte que "todas las herramientas tienen una puerta trasera" y que ya salen modelos que "le quitan la capa de esa restricción... sin la capa etiqueta [~ ética]"; la cadena de suministro de dependencias "puede ser la puerta [de entrada]" [~]; tendencia a que cada empresa haga desarrollos propios porque el software comprado a veces "no pagan el suporte [~ soporte], no hacen actualizaciones" y lo desactualizado "tiene un vector para un ataque"; ejemplo con Google Chrome, el autocompletar y las cookies [~], que exponen "información de usuario contra señas [~ contraseñas]"; el software libre (PHP [~ "Pachabé"]) sin casa matriz recibe los parches de la comunidad más lento que uno respaldado por corporación [~]. En Colombia se hizo un [CONPES ~ "compes"] para IA pero "no tenemos todavía una [ley ~] en relación a lo que es inteligencia [artificial ~]"; se depende de regulaciones de otros países. Lo primero a considerar: "el tema de la seguridad... que la plataforma sea segura" y la versión "que tenga todo el tema de los parches".</li>
+<li><strong>Panorama front-end.</strong> React [~ "rea"] ("react es... desarregado por Facebook" [~ desarrollado por], Meta) y Angular ("si es un framework pero es desarrollado [por] la comunidad" [~]); se discute si React "no es un frame[work]" [~]. Su ejercicio: "Y es Mirar. y como las ofertas de la [gente ~] laborales en relación a" cada tecnología; revisó ofertas (incluida una plataforma local [~ "Compo trabajo" ~ Computrabajo]) con ofertas en "las capitales, Bogotá Medellín... Cali" y filtro por salario: [React ~ "al afro"] ~33% [~], Angular [~], el front-end "entre 4 o 6... millones de pesos" [~ "mis menjones de pez"], "hasta de siete" [~]; "de acá trabaja a .NET y Angular"; conclusión: "react tiene mucho menos ofensión [~ ofertas]... pero la oferta es el pago mucho mejor. Porque es una tecnología un poco más [complicada ~]... aprendizaje más alta"; "una buena práctica es [mirar ~] las opertas [~ ofertas] laborales"; si se quiere algo "menos retado", la tecnología más usada, estable y con buen soporte [~ Angular en su caso].</li>
+<li><strong>Panorama backend y nube.</strong> Backend con [Java ~ "pa'ita"] y [Python ~ "pa'etum"] con "mucha oferta" [~]; AWS ("a la NASA Web Service" [~ Amazon Web Services]) y su "competencia directa que es un nuevo clau [~ Google Cloud]"; "hay más para más web service que para Google [Cloud]"; "es necesario el tema de... la certificación" en ambas plataformas; [Azure ~ "WhatsApp"/"acho"] que "compite con Oracle" [~], usada por "muchas organizaciones de gobierno" por el "respaldo de [Microsoft ~ microsa]" y porque "se puede saltar entre diferentes organizaciones"; recomienda que manejen "[al menos 3 ~]... deseable tres" nubes [~]. Salarios: oferta de ~16 millones [~], saber inglés "aumenta en el [20 ~]% la oferta laboral"; en Estados Unidos "lo menos que puede ganar... de 20 millones a 30 millones" [~] frente a ~50% de eso a nivel local [~].</li>
+<li><strong>Panorama de IA.</strong> Copilot [~ "Copailo"]: "era un alemón [~ acuerdo] que tenia Microsoft con OpenAi" y quedó "para el sector empresarial": "la encuentra en las aplicaciones como office 365 en excel en board [~ Word?]"; están "empezando a surgir nuevas profesiones... en inteligencia artificial" y certificaciones [~], ej. "analista de atos [~ datos] conmía [~ con IA]" y de SQL [~]. Tres frentes de carrera de los modelos: (a) el más inteligente — "hace como dos semanas había salido el modelo Argon de de Gemina [~ Gemini]", "el modelo Carmo [~] que acabó de salir" y "hace un puntico más que lo que hace el modelo más inteligente clau [~ Claude] que es el clau opus [~ Claude Opus]"; los chinos acercan "como quimi [~ Qwen]", hay "un modelo francés" [~ Mistral], "groc que el de Tesla" [~ Grok] y "mios que es el de meta" [~ Llama de Meta]; "estamos llegando al punto de todos los inteligences [~ todos empatados]"; (b) el más rápido — "empezaron los modelos flash" y "la noticia esta semana... salió el DC4 flash [~]", "el modelo mucho más rápido"; "los modelos chinos utilizan los modelos privativos para entrenar sus proclamales [~ propios modelos]"; (c) el costo — "los chinos entram [~ entran] fuertemente con el toque de los costos, la estrategia... ser más económico... entonces los hacen dependientes"; y [OpenAI ~ "chánero de pptm"] "va también en su carrera ofrecer su modelo más económico", con la ventaja de que "como fueron primeras, los modelos de ellos son muchos más entrenas [~ entrenados]". Criterio de elección: "vas a ver la necesidad que usted tenga... el mejor moe [~ modelo]".</li>
+<li><strong>Herramientas recomendadas para desarrollo con IA.</strong> "¿Qué le recomiendo? en mi experiencia. Yo... utilizó [~] pagodos [~] modelos el primer [~]"; nombra Claude Code [~ "cloco"] varias veces: "uno puede instalar cloco", "Cloco es... espectacular" [~]; su criterio clave es la ventana de contexto/memoria: "en la ventana de contexto me garantiza que cuando... lo hago... el desarrollo... pues el sepa que está haciendo" [~]; [Gemini ~ "eminay"] también tiene gran ventana [~ "un mision... de internet contest" ~ ¿un millón de contexto?]; costos por tokens [~] ("bien un precio de estar la recargando con los tokens") y agentes [~ "los agentes de colegos"].</li>
+<li><strong>Autenticación y fraude en la web.</strong> "ahora se utiliza auténticas de los factores [~ autenticación multifactor]... para garantizar la seguridad dentro del [la ~] organización"; reautenticación "yendo el correo... [con ~] coigo [~ código] o utilizando las aplicaciones de [autenticador ~ anteplicación]" [~]; estándar/token usado por apps hechas con "angular o... reyate [~ React]" [~ "Justinian Caulten 3.0" ~ ¿OAuth 2.0?]; error común: "entran en la página de Google... primera búsqueda" y caen en fraude: "ellos simplemente adquieren Google Ads en el anuncio que se le parezca... en este caso hacen fraude"; falsos sitios "parecido a OpenAi que tiene el mismo ícrono [~ ícono]" [~]; las empresas hacen mucho [SEO ~ "prou"] para "posicionar sus íntices" [~].</li>
+<li><strong>Cierre.</strong> Historia de los GPTs [~ "eptés/HPT"] de OpenAI: se les podía pedir "dame la distución [~ instrucción] con que se hecho el epete [~ GPT]" y "Dame el coro [~ conocimiento]... que usaste para hacer el GPT" y "te escribía los archivos" [~]; después "cuando uno creaba un GPT lo tenía que hacer seguro. la primera capa" y "se adopta para la [IA ~] y para todos los [demás ~]". Conclusión de la clase: "las nuevas tecnologianas [~ tecnologías] permiten construir más raras [~ más rápido] y la resta [~ tarea] es construir seguros... la Seguridad Primero para la... construcción de todas nuestras aplicaciones" [~]. Deja "unos recursos complementarios" [~]; habla de agendamiento "[a las ~] cinco latarde [~ 5 de la tarde]" ("ya está en la esponilla [~]"); y promete "mañana le sube el video. también las positivas [~ diapositivas]".</li>
+</ol>
+<h3>Actividades que dejó el profesor</h3>
+<p>No se identificó ninguna tarea/entrega nueva con fecha concreta en la transcripción; esto es lo que sí mencionó:</p>
+<ol>
+<li><strong>Evento de trabajo en grupo [~]:</strong> "y creo a un evento. que ustedes lo venan [~ van a ver] ahí en las semanas... como lo trabaja con ya que... en el grupo de [~] trabajando de antes, entonces ya tienen energía para trabajar"; aclara que "esto ya es como para la semana 1... simplemente familiarizando con los temas" (líneas [1609]–[1624]).</li>
+<li><strong>Dinámica de presentaciones la próxima clase [~]:</strong> "la próxima clase... no gustaría ser con una inámica [~ dinámica] de presentación. como para conocerlos" (líneas [1667]–[1669]).</li>
+<li><strong>Mención dudosa de un "quiz" al cierre [~]:</strong> "es el quiz para que por poder" [~] (línea [1583]) — ininteligible; no quedó clara la instrucción.</li>
+<li><strong>APP a explorar: Mentimeter [~]</strong> — texto textual del docente: "ahorita voy a mostrar la herramienta de mentiment [~ Mentimeter] de la gente. Le prento [~ pienso] recibir algunas esto. de retroalmitación [~ retroalimentación] por parte de ustedes." (líneas [203]–[206]).</li>
+<li><strong>Otras aplicaciones nombradas (recomendación, no tarea):</strong> Claude Code [~ "cloco"] para desarrollo: "uno puede instalar cloco" (línea [1412]) y "Cloco es... espectacular" (línea [1461]); también menciona "los agentes de colegos" [~] (línea [1435]).</li>
+<li><strong>Material que el docente subiría "mañana" (acción suya, no tarea):</strong> "a más tarde mañana le sube el video. también las positivas [~ diapositivas]" (líneas [1687]–[1688]).</li>
+</ol></div>
+</details>
+<details open><summary>Notas de clase — Nuevas Tec 6 nov (SDD, tarea 1)</summary>
+<div class="doc"><h3>Clase Nuevas Tecnologías de Desarrollo (NRC 70121) — 06-nov-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_ntec_20261106.md).</p>
+<p>Clase larga (~2 h 15). Calidad alta; lo dudoso va con [~] y reconstrucción.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Encuesta diagnóstica (no evaluativa, con QR):</strong> área a especializarse</li>
+</ol>
+<p>(ganó IA; también desarrollo web, datos, seguridad, redes, videojuegos),</p>
+<p>lenguajes conocidos, IDEs, nubes usadas, metodologías, confianza en código</p>
+<p>IA y expectativas del curso. Docente: dominar <strong>al menos 2 lenguajes</strong></p>
+<p>(Python y Java los que pide el mercado; tercero JavaScript; .NET para</p>
+<p>gobierno/bancos; videojuegos con C# [~ "Cichar"]; SQL/PLSQL para datos).</p>
+<ol>
+<li>IDEs: Visual Studio (hermano mayor, community/professional/enterprise) vs</li>
+</ol>
+<p><strong>Visual Studio Code</strong> (inspirado en Sublime; sus fuentes liberadas → forks</p>
+<p>con IA: <strong>Cursor, Antigravity, Kiro</strong>); Eclipse (de IBM/Sun → fundación</p>
+<p>Apache), IntelliJ/JetBrains (rusos). Nubes: <strong>AWS manda</strong>, Azure competencia</p>
+<p>directa (sector gobierno), Google Cloud; Firebase (BD no relacional móvil,</p>
+<p>en declive por web apps responsivas); Vercel/Netlify/Supabase facilitan</p>
+<p>despliegue. Metodologías: de cascada/RUP [~] al agilismo (XP, Scrum —</p>
+<p>el más estandarizado —, Kanban).</p>
+<ol>
+<li><strong>Código IA sin revisar: NO.</strong> "Se producen alucinaciones y en el código</li>
+</ol>
+<p>también ocurre y mucho" → siempre revisar; "debe haber un actor humano...</p>
+<p>cada cambio puede romper algo".</p>
+<ol>
+<li>Ideas de apps de los estudiantes (sismos con Arduino, tienda de ropa,</li>
+</ol>
+<p>logística de medicamentos, inventarios de misceláneas, gimnasio con IA):</p>
+<p>"esas ideas me gustaría que las dejaran ahí en el tintero porque **pueden</p>
+<p>ser las tareas para el desarrollo de esta cátedra**". Ejemplos: Rappi</p>
+<p>(pivoteó de software de tiendas a domicilios), inDrive.</p>
+<ol>
+<li>Contexto: Jensen Huang (NVIDIA) "hay un nuevo lenguaje de programación y</li>
+</ol>
+<p>se llama humano" (malinterpretado: no desaparecen los programadores, surge</p>
+<p>más software); Bill Gates: la programación es profesión 100 % humana;</p>
+<p>Linus Torvalds ya usa IA en el kernel [~ módulos Rust]; el lenguaje de moda</p>
+<p>es el INGLÉS: los prompts en inglés dan mejores resultados.</p>
+<ol>
+<li><strong>Evolución del desarrollo asistido con IA:</strong> editores → cascada → Agile</li>
+</ol>
+<p>(2001) → DevOps → GitHub Copilot (autocompletado) → chat (ChatGPT +</p>
+<p>copiar/pegar) → Cursor (comprado por Tesla/Elon Musk; su IA "Composer" solo</p>
+<p>desarrolla) → **era agéntica: Claude Code [~], Codex, Kiro, Spec Kit,</p>
+<p>Google Antigravity (2025, ya 2.0)**.</p>
+<ol>
+<li>Hoy se trabaja con <strong>Codex</strong> (OpenAI, integrado al chat de ChatGPT, con</li>
+</ol>
+<p>mascotas/pets [~]); <strong>próxima clase: Antigravity</strong>. Cursor es netamente</p>
+<p>paga. Kiro (Amazon): SDD bien implementado; noticia de 12 meses gratis</p>
+<p>para Colombia (&gt;1000 créditos/mes) pero UNIMINUTO (correo Microsoft)</p>
+<p>no logra activarlo y el docente "no es muy fan". Clave: "**no casarse con</p>
+<p>una herramienta; casarse con la METODOLOGÍA**" (todas usan SDD, como SQL</p>
+<p>independiente del gestor). Spec Kit (GitHub) se puede invocar en cualquier</p>
+<p>IDE; lo dejó pendiente.</p>
+<ol>
+<li><strong>Vibecoding / "ByCoding" [~]:</strong> programar describiendo en lenguaje natural;</li>
+</ol>
+<p>término de Andrej Karpathy [~ "Andrew Carpatti", cofundador de OpenAI]</p>
+<p>("dejarse llevar por la vibra y olvidar que el código existe").</p>
+<ol>
+<li><strong>Prueba 1 — Lovable ("Loable", sueca) con ByCode:</strong> app web completa;</li>
+</ol>
+<p>login con Google da ~1300 créditos [~]. Prompt con ingeniería del PROM</p>
+<p>básica (rol: experto fullstack front+back; tarea: crear la página web del</p>
+<p>programa de Ingeniería de Sistemas UNIMINUTO virtual; contexto). Resultado</p>
+<p>rápido, responsivo (menú sándwich), colores corporativos; sirve de</p>
+<p><strong>prototipo para el cliente</strong>. Con ByCode la IA toma todas las decisiones.</p>
+<ol>
+<li>**Prueba 2 — Manus (manus.ia, modelos chinos, SUPERagente; de los</li>
+</ol>
+<p>creadores de "Mónica" [~ plugin de navegador]; recientemente comprada):</p>
+<p>usa varios agentes** (navega sitios de referencia, extrae colores y buenas</p>
+<p>prácticas) → resultado más elaborado pero más demorado. Ventaja de los</p>
+<p>modelos chinos: baratos y la gente los entrena usándolos. Ejemplo práctico:</p>
+<p>pedir el vuelo más económico → genera un "artefacto" (página HTML/CSS</p>
+<p>local y compartible).</p>
+<ol>
+<li><strong>SDD (Spec-Driven Development [~ "Space Driver and Development"]):</strong></li>
+</ol>
+<p>desarrollo conducido por ESPECIFICACIÓN. Archivo <strong>Agents.md</strong> (markdown,</p>
+<p>lo entienden todos los LLMs; en Claude = CLAUDE.md [~], en Kiro =</p>
+<p>"Constitution") = <strong>lo no negociable</strong> (colores institucionales, plan de</p>
+<p>estudios, Ley 1581 de datos). Habilidades (frontend, backend) +</p>
+<p><strong>orquestador</strong> (como gerente de proyectos). Flujo: constitución →</p>
+<p>especificación (analista; historias de usuario quién/cómo/qué) →</p>
+<p>desarrollador lee la especificación → plan (estructura, criterios de</p>
+<p>aceptación) → aprobar plan → tareas → código → implementación/despliegue.</p>
+<p>Contexto por <strong>RAG</strong>: carpeta <code>.docs/</code> con pensum, sílabos, manual</p>
+<p>corporativo → "así no inventa información".</p>
+<ol>
+<li>**Práctica con Codex (3 prompts, en carpeta <code>página-programa</code> del</li>
+</ol>
+<p>escritorio):** (1) "actúa como arquitecto de software" → Agents.md +</p>
+<p>estructura (<code>spec/</code>, <code>.docs/</code>); (2) "actúa como analista de requisitos" →</p>
+<p>archivo de especificación (menú, banner, botón "quiero inscribirme",</p>
+<p>programa, perfil, área de formación); (3) desarrollador/arquitecto →</p>
+<p>plan (estructura, carga de datos, validación de formulario, criterios de</p>
+<p>aceptación) → aprobar → tareas → <strong>código</strong>. Resultado SDD: página más</p>
+<p>completa y usable que ByCode (programa, perfil, formación, FAQ). Stack</p>
+<p>elegido: HTML/CSS/JS puro. Peligro: la herramienta manipula TODO lo de la</p>
+<p>carpeta (puede borrar datos sensibles); por eso las organizaciones no</p>
+<p>permiten instalarlas; en capa libre entrena el modelo con tus datos.</p>
+<ol>
+<li>Novedades: modelos OpenAI "astros" (luna/tierra/sol + "Astra" [~]);</li>
+</ol>
+<p>alucinación de LLMs ~70-80 %, el último Gemini baja a ~30 % [~];</p>
+<p>Google <strong>Stitch</strong> (librería UX/UI para no hacer "la típica página de IA");</p>
+<p>Mac para desarrollo tope de gama (iOS/Xcode/Swift) y por la <strong>NPU</strong></p>
+<p>(M3/M4, NVIDIA [~ "SPAR"], modelos IA locales); Linux sí o sí para</p>
+<p>nube/infraestructura; no casarse con la tecnología.</p>
+<h3>Actividades que dejó el profesor (la PRIMERA tarea del curso)</h3>
+<ol>
+<li>**Tarea — PDF comparativo (3 versiones de la página del programa de</li>
+</ol>
+<p>Ingeniería de Sistemas UNIMINUTO virtual):** "ustedes hagan la captura,</p>
+<p>copien el enlace publicado y se lo van añadiendo a un PDF" → en un Word/PDF</p>
+<p>hasta la diapositiva 34: pegar el resultado de <strong>Lovable</strong>, el de</p>
+<p><strong>Manus</strong> y el de <strong>Codex con SDD</strong> (los 3 prompts). Los "datos por</p>
+<p>confirmar" se toman de la página oficial del programa (o darle la URL a la</p>
+<p>IA para extraer los datos reales).</p>
+<ol>
+<li><strong>Pendiente para la próxima clase:</strong> DESPLIEGUE de la página (en la nube:</li>
+</ol>
+<p><strong>Netlify</strong> a su gusto; Vercel si fuera en sala común). Docente: "queremos</p>
+<p>ver la página pero la queremos ver en la nube".</p>
+<ol>
+<li>El docente subirá las diapositivas y la actividad escrita a la plataforma;</li>
+</ol>
+<p>hasta ahora no había dejado ninguna actividad formal ("no se ha dejado</p>
+<p>hasta el momento ninguna actividad al respecto").</p>
+<ol>
+<li>Asesorías: <strong>lunes después de las 5 pm</strong>, previamente agendadas.</li>
+<li>Ideas de app de los estudiantes quedan "en el tintero" como base posible</li>
+</ol>
+<p>del trabajo de la cátedra.</p></div>
+</details>
 <h2>Ethical Hacking</h2>
 <details open><summary>Ethical Hacking — 23 oct 2026</summary>
 <div class="doc"><h3>Minuto 0-5</h3>
@@ -14286,5 +14583,158 @@ details[open] summary{border-bottom:1px solid var(--line)}
 <p>[1454] Estén bien.</p>
 <p>[1455] Gracias, profe, feliz noche.</p>
 <p>[1456] Igualmente, Juan.</p></div>
+</details>
+<details open><summary>Notas de clase — Ethical Hacking 23 oct</summary>
+<div class="doc"><h3>Clase Ethical Hacking (NRC 70120) — 23-oct-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_hack_20261023.md). Calidad alta; corregí errores obvios de texto.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Anuncio institucional (vicerrectoría):</strong> presentación de la plataforma <strong>Virtual Experience</strong> (también "VirtuExperience") de competencias transversales: recursos sonoros, audiovisuales, gamificados y textuales, y seis líneas: comunicarse, razonamiento matemático [~"Neuromath"], investigación, gerencia, convivencia/valores [~"Voxivitas"] y "Latido social". No reemplaza el aula ni las Open Class, las complementa.</li>
+<li><strong>Bienvenida y presentaciones personales:</strong> estudiantes Sneider González [~"Hansel de González Bermúdez"; Villavicencio, Meta, técnico en sistemas: reparación de computadores/impresoras/celulares y desarrollo], María Diana [~también "María Adriana"/"María Gabriela"; Soacha, proyecto en la CCB], Edwin Alexander (Bogotá) y Gerardo Maya (Bogotá, analista de datos en Teleperformance, área de Workforce). El docente, <strong>Alejandro Urrea Ospina</strong> [~transcripción: "Alejandro Tospina"], ingeniero con maestría en educación, 26 años en educación, 16 años en el Ministerio de Educación (parte de calidad docente universitario), 8 años en el Ministerio de las TIC como delegado en el Quindío, vive en Armenia, docente también de ingeniería de sistemas en otra universidad (proyectos, ética hacking y percepción computacional).</li>
+<li><strong>Socialización del espacio académico — semana 1 "de ambientación":</strong> video corto de presentación del curso con resumen de las 8 semanas; introducción a la importancia actual del hacking ético en empresas (ámbito público y privado) y la seguridad de la información. Marco normativo mencionado: <strong>Ley 1273 de 2009</strong> (MinTIC), MinCiencias e <strong>ISO 27001</strong> como métrica de seguridad de la información; cultura de seguridad y detección/evaluación/mitigación de riesgos.</li>
+<li><strong>Identificación del curso:</strong> de pregrado/universitario, con <strong>tres créditos académicos</strong>.</li>
+<li><strong>Tres núcleos temáticos de las 8 semanas:</strong> (1) gestión de incidentes en sistemas de información (introducción, políticas, estrategias de recuperación y restauración de incidentes); (2) metodologías y fases del hacking ético: fundamentos y herramientas; (3) estrategias de <strong>bloqueo de puertas traseras</strong>: qué son, métodos de detección y políticas de seguridad.</li>
+<li><strong>Resultados de aprendizaje:</strong> detectar falencias en sistemas de información y establecer políticas de seguridad; resolver problemas, amenazas y ataques en la gestión de riesgos; probar políticas frente a puertas traseras en una infraestructura tecnológica. Aprendizajes específicos: identificar procesos de gestión de incidentes, clasificar normativas/estándares internacionales, técnicas de recuperación ante desastres informáticos, fundamentos de pruebas de penetración y fases del hacking ético, métodos activos y pasivos de recolección de información, tipos de puertas traseras y herramientas de detección, implementación de políticas de seguridad.</li>
+<li><strong>Medios educativos y recursos:</strong> usar los recursos/medios educativos y recursos interactivos de la plataforma; invita a usar el <strong>CREI</strong> (biblioteca: libros y bases de datos para consultar y descargar).</li>
+<li><strong>Sugerencias de estudio y logística:</strong> tareas urgentes e importantes; <strong>cierres de actividades los lunes a las 11:55 p.m.</strong>; <strong>Open Class los viernes a las 7 p.m.</strong>; ejemplos de citas (directa, corta, larga e indirecta) y <strong>normas APA versión 7</strong> para referencias.</li>
+<li><strong>Sistema de evaluación — tres modalidades</strong> (se seleccionan en las semanas 1 y 2; <strong>desde la semana 3 no se puede cambiar</strong>): <strong>Actividades</strong> (semanas 2, 4, 6 y 8 = 70 %; foros colaborativos semanas 3, 5 y 7 = 30 %; puntos extra = 6 %; semana 2: entregable de 17.50; semana 3: foro de discusión 10 %). <strong>Examen</strong> (examen semanal de 10 % cada semana = 70 %; foros 3, 5 y 7 = 30 %; advertencia: en semanas 3, 5 y 7 hay que presentar el examen <strong>y</strong> el foro). <strong>Trabajo final</strong> (tres entregas: semanas 3, 6 y 8 —la final suma las anteriores—, 14 % de trabajo final + 14 % de evidencia del alcance del aprendizaje = 70 %; foros = 30 %; puntos extra cada semana). Semana 1 para todos: <strong>examen diagnóstico</strong> (no genera nota, da puntos extra).</li>
+<li><strong>Foro de presentación y foro de dudas</strong> en la plataforma (foro de presentación con video, enlace de LinkedIn y la opción de compartir foto de mascota para "quitar ese hielo"). <strong>Asesorías los miércoles de 5 a 6 p.m.</strong> por el link de asesoría virtual (aparece en el foro de dudas y en el foro del acuerdo pedagógico).</li>
+<li><strong>Grabaciones de las Open Class:</strong> en Open Class → "grabaciones en la nube"; el video se sube ~30-40 minutos después de terminar la clase.</li>
+<li><strong>Acuerdo pedagógico:</strong> dos instancias — un foro <strong>solo de lectura</strong> (información del curso, horarios, 8 semanas) y un foro de <strong>aceptación</strong>. Cambio de modalidad posible hasta la semana 3. Acuerdos adicionales: descargar la <strong>guía de buenas prácticas en el uso de la IA</strong> (a revisar "entre ocho días"), puntualidad en entregas (justificaciones por correo para reabrir la plataforma), <strong>no plagio</strong> (sistema antiplagio <strong>Turnitin</strong> [~"Turnity"]; documento con más del 50 % de plagio = nota 0 [~]), comunicación por canales institucionales, formulario de excusas (encuesta de un minuto). Puntualidad: el docente espera <strong>cinco minutos</strong>. La participación activa en las Open Class se tiene en cuenta en la nota final.</li>
+<li><strong>Bloque práctico en clase (~30 min):</strong> interactuar con la semana 1 — foro de presentación, examen diagnóstico, punto extra, aceptación del acuerdo pedagógico (y foto de mascota si queda tiempo).</li>
+<li><strong>Problemas técnicos:</strong> un estudiante tuvo error al seleccionar la modalidad; solución sugerida: cerrar sesión y volver a ingresar; si persiste, escribir por correo para remitir a soporte. Durante la espera la transcripción registra casi solo "Gracias" (minutos 30-60).</li>
+<li><strong>Conceptualización — incidentes de seguridad (2.ª parte de la clase):</strong> un incidente es un evento que <strong>compromete un activo de la organización (la información)</strong>: confidencialidad, integridad y disponibilidad. La gestión de incidentes es un <strong>proceso estructurado</strong> para detectar, responder, investigar y recuperar. Los incidentes son crecientes; "empresa que no tenga información... está en la quiebra". Invitación a ver un <strong>video de gestión de incidentes (~6 minutos)</strong> en la plataforma.</li>
+<li><strong>Anatomía del riesgo:</strong> <strong>vulnerabilidad + amenaza = riesgo</strong>. Las empresas son atacadas a diario y ahora las amenazas vienen de <strong>chatbots / inteligencia artificial</strong> que buscan vulnerabilidades para ingresar a los sistemas.</li>
+<li><strong>Eventos vs. incidentes:</strong> intentos fallidos y fallas en inicios de sesión son eventos; ejemplo del banco: si digitas mal la contraseña tres veces, la cuenta <strong>se bloquea</strong> (hay que ir físicamente al banco o esperar 24 horas), porque alguien podría intentar entrar a tu cuenta y hacer un fraude.</li>
+<li><strong>Caso personal del docente (ayer):</strong> perdió la tarjeta débito en el fin de semana; desde la app la <strong>apagó/bloqueó</strong> para que no generara transacciones; en el banco le entregaron una <strong>tarjeta física nueva en dos minutos</strong> y el sistema quedó actualizado automáticamente ("ya todo eso ha cambiado, todas las políticas de seguridad han cambiado").</li>
+<li><strong>Estándares internacionales:</strong> <strong>ISO/IEC 27035</strong> [~transcripción "2735"/"270035"] — proceso operativo de incidentes: directrices y técnicas para detectar, reportar, evaluar y tratar; <strong>ISO 27001</strong> — controles y salvaguardas del sistema de gestión de seguridad de la información. El docente compartirá esa información <strong>para la clase 2</strong>.</li>
+<li><strong>Tipificación de incidentes (4 categorías):</strong> (1) <strong>accesos no autorizados</strong> (persona o malware obtiene acceso lógico/físico sin autorización, suplantación de identidad → impacto en <strong>confidencialidad</strong>); (2) <strong>modificación no autorizada</strong> (alteración maliciosa en base de datos, inyección SQL [~"SQBG"], pérdida de registros → <strong>integridad</strong>; propiedades AISP [~] de los sistemas); (3) <strong>no disponibilidad de recursos</strong> (código de ataque que impide el uso legítimo del activo; <strong>denegación de servicio</strong> → <strong>disponibilidad</strong>); (4) <strong>uso inapropiado</strong> (violación interna de las políticas de uso de recursos tecnológicos → impacto <strong>legal y operativo</strong>).</li>
+<li><strong>Fundamentos de la gestión de incidentes:</strong> políticas y procedimientos claramente definidos; <strong>capacitación de los colaboradores</strong> en ciberseguridad; roles y responsabilidades con <strong>equipos CSIRT y CERT</strong> [~transcripción "CIRS"/"CERTS"]; controles tecnológicos (firewalls, antivirus, cifrado, <strong>autenticación multifactor</strong>); detección y notificación oportuna (herramientas de monitoreo robustas, <strong>logs de auditoría</strong>); <strong>canales formales para reportar incidentes</strong>; sensores automáticos de fraudes/ingresos no permitidos; control por <strong>horarios</strong> (fuera del horario no hay actividad).</li>
+<li><strong>Clasificación y análisis de incidencias:</strong> malware, phishing, fuga de datos [~transcripción "jugar datos"], e <strong>ingeniería social</strong>; <strong>spear phishing</strong> [~transcripción "speed phishing"]; el <strong>phishing por correo electrónico</strong> es el más utilizado: empresas que se han quebrado o robado porque a un colaborador sin capacitación le llegó un correo (es el que hace transacciones o paga la nómina); ha pasado en alcaldías, organizaciones y empresas. Gravedad e impacto financiero: "hay empresas que se quiebran con un simple ataque de eso".</li>
+<li><strong>Respuesta a incidentes:</strong> <strong>contención</strong> (acciones inmediatas para mitigar el impacto, aislamiento de los sistemas/redes afectadas); <strong>erradicación y recuperación</strong> (eliminación de la <strong>causa raíz</strong> — analogía de la fumigación contra cucarachas en la casa — y recuperación de hardware, software y comunicaciones); <strong>post-incidente</strong>: mejora continua, documentar todo lo ocurrido, evaluar efectividad y <strong>retroalimentación en lecciones aprendidas</strong>.</li>
+<li><strong>Marcos de cumplimiento:</strong> ISO 27035, ISO 27001 y <strong>Ley 1273</strong> en Colombia [~transcripción "27.035, 27.001 o la 12.73"], protección de datos personales. <strong>Caso Meta:</strong> demandada por usar información de clientes de redes sociales para otros fines; lo que publicas en Facebook, Instagram y WhatsApp <strong>es de Meta</strong> — hay que leer los acuerdos/consentimientos que uno firma "por rapidez".</li>
+<li><strong>Cambio de paradigma:</strong> del enfoque <strong>reactivo</strong> (reparar fallas o ataques; "genera caos y cierre de muchas empresas") a un enfoque <strong>proactivo</strong>: incidentes más inteligentes, reducir el impacto, generar <strong>continuidad del negocio</strong> y preservar la confianza.</li>
+<li><strong>Caso de estudio — Target, 2013</strong> [~transcripción "Tadget"]: hacking sistémico; hackers accedieron a <strong>datos de 40 millones de clientes</strong>; la empresa <strong>ignoró las alertas iniciales</strong> por falta de un sistema adecuado. Diferencia: los <strong>hackers</strong> ingresan sin autorización, manipulan y a veces piden recompensa (incluso en <strong>Bitcoin</strong>), a diferencia del <strong>hacking ético</strong>.</li>
+<li><strong>Conclusiones del caso:</strong> gestión de incidentes a partir de las ISOs (detectar, contener, evolucionar); rol humano y técnico dentro de la empresa; tecnología, forense y decisiones estratégicas; límite legal en la <strong>Ley 1273</strong> [~transcripción "12.33"] y herramientas de judicialización en ciberseguridad.</li>
+<li><strong>Netflix — IA:</strong> hay una <strong>película/documental de 28 minutos</strong> titulada "La IA se descontrola" [~también citada como "La IA sin freno" y "IA sin premio"; el título quedó confuso en la transcripción]; también hay series invitadas. Contexto: hace 15-20 días hubo una <strong>reunión de presidentes a nivel mundial</strong> para controlar la inteligencia artificial. La relación del contenido es con la <strong>ingeniería social</strong> y la evolución de la IA.</li>
+<li><strong>Cierre:</strong> reenvió por el chat la <strong>presentación de la Open Class actualizada</strong> ("le hice unos ajustes a la primera"); recalcó usar la semana para la selección de modalidad, el acuerdo pedagógico y el foro de presentación; despedida ("vamos leyendo, los invito a que vean la película de 28 minutos").</li>
+</ol>
+<h3>Actividades que dejó el profesor</h3>
+<ol>
+<li><strong>Seleccionar la modalidad de evaluación esta semana</strong> (actividades, examen o trabajo final; desde la semana 3 no se puede cambiar). Cita textual: "Recuerden utilizar esta semana. Para la selección de la modalidad de evaluación. Si quieren actividades o exámenes."</li>
+<li><strong>Participar del foro de presentación</strong> (semana 1). Cita textual: "la idea es que ustedes escriban quitar ese hielo, se presenten" — y opcionalmente "si quieren presentarnos sus mascotas... compartan la foto".</li>
+<li><strong>Presentar el examen diagnóstico</strong> (semana 1; no genera nota, da puntos extra). Cita textual: "la invitación es que participen de un examen diagnóstico que hay allí que no genera nota y pues participen del primer punto extra".</li>
+<li><strong>Leer y aceptar el acuerdo pedagógico</strong> (dos foros: uno solo de lectura y el de aceptación). Cita textual: "cuando le dicen acepto le dicen entregar o enviar y automáticamente ¿qué está haciendo ahí? aceptando el acuerdo pedagógico".</li>
+<li><strong>Descargar la guía de buenas prácticas en el uso de la IA</strong> y revisarla; se trabajará en la próxima sesión (~8 días). Cita textual: "aquí es donde está la guía de las buenas prácticas del uso de la IA... la IA es que la descarguen eso lo vamos a mirar entre ocho días, la descarguen miren todas las guías de las buenas prácticas" [~].</li>
+<li><strong>Ver el video de gestión de incidentes en la plataforma (~6 minutos).</strong> Cita textual: "la invitación para que vean el video... es un video más o menos 6 minutos que tiene que ver mucho con la [gestión] de incidentes" [~].</li>
+<li><strong>Ver en Netflix la película/documental de 28 minutos sobre IA y preparar comentarios para un foro participativo "entre ocho días".</strong> Cita textual: "está en Netflix y se llama un instado se llama la IA se descontrola" [~el título aparece también como "La IA sin freno" y "IA sin premio"] y "voy a dar un espacio entre ocho días como para que nos cuenten algo de qué les pareció esa información... ¿cómo fueron los ataques?" [~]. Se conecta con la ingeniería social y la evolución de la IA.</li>
+<li><strong>Asistir a las asesorías: miércoles de 5 a 6 p.m.</strong> por el link de asesoría virtual. Cita textual: "las asesorías las vamos a tener los miércoles de 5 a 6".</li>
+<li><strong>Semana 2 (modalidad actividades): entregable</strong> que vale 17.50 + punto extra; <strong>semana 3: foro de discusión que vale el 10 %</strong> (y en modalidad examen: presentar el examen <strong>y</strong> el foro en las semanas 3, 5 y 7). Los <strong>puntos extra semanales equivalen al 6 %</strong> de la nota final.</li>
+<li><strong>Cuidar los cierres de actividades: lunes a las 11:55 p.m.</strong>; <strong>Open Class: viernes a las 7 p.m.</strong> Cita textual: "los cierres de las actividades son los lunes a las 11.55 de la noche. nuestras Open Class van a ser los viernes a las 7 de la noche".</li>
+</ol>
+<p><strong>Apps / nombres de aplicación mencionados:</strong></p>
+<ul>
+<li><strong>Virtual Experience (VirtuExperience)</strong> — plataforma institucional de competencias transversales (anuncio de la vicerrectoría). Cita textual: "VirtuExperience es un espacio organizado y con propósito... estás a un clic de descubrir herramientas que te ayudarán a avanzar más firme, más claro y más preparado".</li>
+<li><strong>Netflix</strong> — donde está la película/documental de 28 minutos sobre IA ("La IA se descontrola" [~]). Cita textual: "aquí se los voy a compartir en el chat está en Netflix".</li>
+</ul></div>
+</details>
+<details open><summary>Notas de clase — Ethical Hacking 30 oct</summary>
+<div class="doc"><h3>Clase Ethical Hacking (NRC 70120) — 30-oct-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_hack_20261030.md). Calidad alta; corregí errores obvios de texto.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Apertura — Open Class #2 (viernes de Halloween).</strong> Información de la vicerrectoría sobre el programa de inclusión de UNIMINUTO Virtual. El docente se presenta como "docente nivelador del programa de ingeniería sistemas" y miembro del equipo de Consejería Académica, para acompañar situaciones de salud, laborales o ingresos tardíos. Recordó que las open class quedan grabadas en la nube.</li>
+<li><strong>Lecturas asignadas previas (recapitulación).</strong> Documentos compartidos para lectura: ISO/IEC 27001 (seguridad de la información), ISO 27035, COBIT, Ley 1581 de 2012 y Decreto 1377 de 2013 [~], "para hacer un panorama de esa parte del proceso de gestión de incidentes".</li>
+<li><strong>Gestión de incidentes de seguridad en 4 fases:</strong></li>
+</ol>
+<ul>
+<li>Fase 1 — Preparación: cómo afrontar mitigaciones y riesgos ante un hackeo, "cuáles son los roles, los comités", canales de comunicación, herramientas de seguridad y "hay que hacer simulacros en entornos controlados".</li>
+<li>Fase 2 — Detección y análisis: monitoreo continuo (personas y recursos tecnológicos), alertas, evaluación de eventos, "la clasificación de tipo de ataque" y notificaciones según estándares de calidad.</li>
+<li>Fase 3 — Contención, erradicación y recuperación: aislamiento de sistemas, entornos controlados, y "toda la parte de los backups o las copias de seguridad".</li>
+<li>Fase 4 — Actividades post-incidente: lecciones aprendidas, documentación, "análisis forenses", causas raíces, medidas correctivas y un "mindset" de buenas prácticas (y las malas, "que es lo que no se debe hacer").</li>
+</ul>
+<ol>
+<li><strong>Boletín del Centro Cibernético de la Policía (con Interpol / CAI Virtual).</strong> Cibernoticias y balance de ciberataques 2025. Destacó la modalidad "FileFiles" [~ probablemente «FileFix»], "una técnica de ingeniería social" detectada en 2025 que "se aprovecha el explorador de Windows para engañar al usuario" y ejecutar comandos maliciosos (comando oculto vía PowerShell). Estadísticas 2024–2025 (según el docente, con la ley 1273 de 2009 [~ "ley 12.33 del 2009"]): 22.959 hurtos por medios informáticos, 9.000 accesos abusivos a un sistema informático; violación de datos personales y suplantación de sitios web bajaron. Ciudades con mayor afectación: Bogotá 30 %, Medellín 7 % [~ "medicina"], Cali 6 %, Barranquilla 3 % [~ "marraquí"], Cartagena 1,9 % [~ "catarán"]. Los boletines llegan solo hasta 2025 (en 2026 no han emitido más) y el link dejó de funcionar durante la clase.</li>
+<li><strong>Quiz de phishing (≈15 min, en clase).</strong> Link en el chat: "es un test para saber si lo están engañando", 10 preguntas. Participaron (nota de participación): Hans, Luis Carlos, Edwin [~ "Edme"], Mariana, María Diana, Juan David, Adrián y Sneider. Retroalimentación: Adrián 8/10 ("fue por desconfianza"); estudiantes contaron que sus empresas les envían correos de phishing simulado (empresa de carros de Renault "hasta cinco veces al mes") y mensajes engañosos al celular.</li>
+<li><strong>Ingeniería social.</strong> El docente anuncia que compartirá material sobre "25 técnicas de ingeniería social" con infografías, para retroalimentarlas y que los estudiantes puedan hacer "campañas de ingeniería social en sus empresas" — "Eso sí, son laboratorios controlados". Explicó páginas gemelas (clon de página), códigos QR que llevan a páginas que capturan datos (nombre y correo para enviarles la infografía), focus group y simulacros sin avisar ("si todos sabemos que va a haber un simulacro… todo el mundo inconsciente no va a salir"). Casos propios: servidor falso de "Netflix gratis" y página gemela de la bolsa de empleo de una universidad ("toda la gente que cayó en eso").</li>
+<li><strong>Caso Binance (noticia del día).</strong> Asalto al respaldo monetario de Binance en Bitcoin "ayer": habrían entrado por un periférico de entrada de un funcionario, "no usaron claves… pasaron derecho, crearon canales de salida con autorizaciones plenas"; el docente mencionó 2.600 millones de dólares robados (un estudiante corrigió: "fueron 6.300 millones de dólares" [~ monto no verificado]). Lectura del docente: "Una ingeniería social previa… más ética hacking".</li>
+<li><strong>Hacking ético.</strong> Empresas que pagan para ser testeadaas: "yo pago para que me testeen cómo estoy de ciberseguridad, para que me hackeen". Esencia: "no voy a hacer daño, lo que voy a hacer es informarles cómo ingresé, qué tuve acceso". Conectó con el PETI [~ "PETIS/PEPIS"] y con la IA "generativa y agéntica". Recordó la película en Netflix de 28 minutos (asignada hace 8 días): "nos va a colocar en un punto muy estratégico… cómo podemos mitigar la IA en ese aspecto".</li>
+<li><strong>Triada CID y anatomía de un ataque.</strong> "Confidencialidad, integridad y disponibilidad, que es el núcleo que nosotros siempre protegemos". El ataque primero golpea la confidencialidad, luego la integridad ("cifras maliciosas" que dejan archivos "ilegibles o inutilizables" — de ahí el secuestro de información y "las empresas pagan con Bitcoin") y la disponibilidad ("la empresa… paralizada", sin poder recuperar información); "algunos buscan las tres".</li>
+<li><strong>Ciclo PHVA como motor del SGSI.</strong> Planificar (objetivos, políticas, riesgos, oportunidades, talento humano, componente técnico, comités), Hacer (implementar "controles preventivos o correctivos"), Verificar ("medición de rendimientos… testing o… simulacros") y Actuar; esto aplica también a "proyectos de base tecnológica".</li>
+<li><strong>Anexos y controles de la ISO 27001.</strong> Controles organizativos (37), controles a personas (factor humano, muy vulnerable a la ingeniería social), controles tecnológicos (34) y controles físicos (instalaciones/infraestructura). Alineación de políticas y estrategias (PETI), evaluación y tratamiento de riesgos ("no podemos decir que todas las empresas son iguales… depende de su ámbito tecnológico, de sus stakeholders y de su core de negocio"), requisitos legales/regulatorios/contractuales, objetivos SMART ("cómo reducimos incidentes críticos en un 20 % en 12 meses") y documentar cada fase del PHVA.</li>
+<li><strong>ISO 27035.</strong> Cinco fases: "preparación, identificación, evaluación, respuestas y lecciones aprendidas". Ejemplo real: universidad detecta una fuga de datos de estudiantes por un sistema mal configurado; respuesta con contención del incidente, evaluación del impacto, notificación de las partes [~ "las ventas"] y controles reforzados.</li>
+<li><strong>COBIT.</strong> Gobernanza de TI: "un marco de gobierno en la gestión de TI… desarrollado por la ISACA que es como la que certifica en COBIT"; procesos de seguridad de servicios y gestión de continuidad.</li>
+<li><strong>Marco legal de datos.</strong> Ley 1581 de 2012 (habeas data [~ "AVEASDAT"]): derechos de los titulares, obligaciones de los responsables del tratamiento y medidas de seguridad; mencionó la demanda en México a Meta "porque vendió la información de muchos usuarios" y que en Colombia también hay empresas que han vendido bases de datos. Decreto 1377 [~]: reglamenta la Ley 1581 (consentimientos, políticas, correctivos); consentimiento firmado por los padres para menores de edad, consentimiento informado también en experimentos de ingeniería social y testing ("hay que informarle a las personas… y que si ellas aprueban"); en formularios (p. ej. Google) debe declararse para qué se usarán los datos; "si la información que voy a capturar no es tan relevante, no necesito consentimiento, pero si ya toco alguna [información] relevante o algo necesito algo [~ de] consentimiento". Añadió que el Decreto 377 de 2013 [~] es "con toda la parte de e-commerce".</li>
+<li><strong>IA y regulación.</strong> Recordó la reunión de presidentes (hace ~20 días) sobre frenar un poco la IA: "¿cómo van a empezar a trabajar? Eso son ordenanzas", y cómo generar "controles de hacking ético [~ "faquín ético"] usando la inteligencia artificial o detectando la inteligencia artificial".</li>
+<li><strong>Taller colaborativo — "evidencia tecnológica" en tablero.</strong> "En este momento les voy a compartir este link, que se llama un tablero de experiencias empresariales [~ "un talero"]… no necesitan usuario ni contraseña". El tablero trae las 5 normas (ISO/IEC 27001, ISO 27035, COBIT, Ley 1581, Decreto 1377). Instrucción: "seleccionen alguna de las 5… y van a mirar qué empresa han desarrollado la 27001 en Colombia o en el mundo", traer el link/foto de la empresa, textos, videos ("esos papelitos… los pueden borrar, pueden colocar imágenes"). "Vamos a hacer una laguna de datos [~ lluvia de datos] de una de las empresas que haya implementado alguna de esas cinco". Tiempo: media hora, recortada a ~10 min ("me equivoqué en el tiempo… vamos a las 8 y media"); el tablero queda abierto toda la semana y el docente "lo descarga y lo comparte como imagen" antes de la próxima Open Class ("dentro de ocho días") para hacer retroalimentación.</li>
+<li><strong>Modalidades de evaluación y extras.</strong> "Tenemos siempre tres modalidades: la de examen, la de actividades y la de trabajo final"; plazo hasta la otra semana para cambiar o seleccionar modalidad ("seleccione la modalidad para ya empezar a evaluar sus actividades"). Compartió en el chat infografías de COBIT 2019 [~ "COVID 2019"] y de ETL + COBIT (ETL: metodología de proyectos de base tecnológica; COBIT: gobernanza; "no todas las empresas son ITIL, ni todas las empresas van a tener metodologías COBIT"). Ante la pregunta de puntos extra, dijo que tiene en cuenta la clase autónoma y la participación "para de pronto una nota que les quede bajita por ahí en un examen".</li>
+<li><strong>Estudio de caso de la semana 2 (modalidad actividades, individual).</strong> Pregunta guía: "¿Qué norma se usa para la gestión de seguridad de información y qué estándar ayuda a la gestión de riesgo de una organización?". Con rúbrica: "la presentación y organización, el objeto de estudio, actores de contexto, el objetivo de estudio del caso y el informe final". A partir de la revisión de los documentos, identificar un objeto de estudio y escribir un problema o situación particular; cuadro comparativo con características, ventajas y desventajas de la ISO 27001, la 27002, la 27035, COBIT, PCI DSS, GDPR [~ "GPR"], HIPAA [~ "IPA"], NIST [~ "NIS"], la ley 1273 [~ "ley 273"] y la ley 1581, realizado "en una herramienta LUCI [~]". Luego un caso de seguridad ("banco seguro" y "data seguro" [~ nombres del caso]) donde se debe decir "qué norma aplica, qué problemas resuelve y qué beneficio hay para la organización", evidenciado en el tablero con redacción y normas APA. <strong>Fecha límite:</strong> "recuerden que esta actividad cierra el día lunes, que es festivo, antes de las 11 y 55 de la noche [~ 11:55 p.m.]"; si no pudieron entregar por una situación, "yo con mucho gusto les abro la plataforma".</li>
+</ol>
+<h3>Actividades que dejó el profesor</h3>
+<ol>
+<li><strong>Quiz de phishing (hecho en clase, con nota de participación):</strong> "voy a dar 15 minutos… es un test para saber si lo están engañando" (link compartido en el chat, 10 preguntas).</li>
+<li><strong>Tablero colaborativo de experiencias empresariales ("evidencia tecnológica"), queda abierto toda la semana:</strong> "seleccionen alguna de las 5… van a mirar qué empresa han desarrollado la 27001 en Colombia o en el mundo… ¿qué experiencias han tenido? ¿qué feedback podemos tener?"; traer link/foto/texto/video de la empresa; "vamos a hacer una laguna de datos [~] de una de las empresas que haya implementado alguna de esas cinco"; "yo lo que hago es descargarlo y lo compartimos dentro de ocho días" (feedback en la próxima Open Class). Los que no pudieron entrar por el móvil pueden "interactuar hoy más tardecito o mañana".</li>
+<li><strong>Ver la película en Netflix (28 minutos)</strong>, asignada hace 8 días y recordada dos veces en esta clase: "véanla… la película que está en Netflix, dura 28 minutos y eso nos va a poner… en un punto muy estratégico".</li>
+<li><strong>Estudio de caso de la semana 2 (modalidad actividades, individual, con rúbrica):</strong> cuadro comparativo de normas con características/ventajas/desventajas y resolución de caso de seguridad con redacción y normas APA; <strong>"esta actividad cierra el día lunes, que es festivo, antes de las 11 y 55 de la noche"</strong>; si hay impedimento, escribirle al docente para que reabra la plataforma.</li>
+<li><strong>Examen de la semana 2 (solo modalidad examen):</strong> "Ya recuerden que el examen de la semana dos, participen del examen, los que están en modalidad de examen."</li>
+<li><strong>Modalidad de evaluación:</strong> "hasta la otra semana tienen plazo para cambiar de modalidad" (examen / actividades / trabajo final); a quienes no la hayan seleccionado: "seleccione la modalidad para ya empezar a evaluar sus actividades".</li>
+<li><strong>Lecturas (si no las hicieron):</strong> los 4 documentos (ISO 27001, ISO 27035, COBIT, Ley 1581, Decreto 1377) enviados por correo y cargados en la semana 2 del curso: "si no lo han leído… lo leen muy rápido, es como para que ustedes comprendan"; además, las infografías de COBIT 2019 y ETL+COBIT compartidas en el chat "como para lectura".</li>
+</ol>
+<p><strong>Apps/aplicaciones mencionadas para explorar o usar:</strong></p>
+<ul>
+<li><strong>Tablero de experiencias empresariales</strong> (taller, sin credenciales): "en este momento les voy a compartir este link, que se llama un tablero de experiencias empresariales [~ 'un talero']… no necesitan usuario ni contraseña" (plataforma tipo Miro/Padlet, no nombrada).</li>
+<li><strong>"Herramienta LUCI" [~]</strong> para el estudio de caso: "esto lo deben de realizar en una herramienta LUCI [~ probablemente Lucidchart]".</li>
+<li><strong>Test de phishing</strong> (web, en clase): "es un test para saber si lo están engañando".</li>
+<li><strong>Netflix</strong>: película de 28 minutos asignada ("la película que está en Netflix, dura 28 minutos… véanla").</li>
+</ul></div>
+</details>
+<details open><summary>Notas de clase — Ethical Hacking 6 nov (foro TestDisk)</summary>
+<div class="doc"><h3>Clase Ethical Hacking (NRC 70120) — 06-nov-2026</h3>
+<p>Fuente: transcripción Groq whisper-large-v3-turbo (bloques_hack_20261106.md). Calidad alta; corregí errores obvios de texto.</p>
+<h3>Resumen de la clase</h3>
+<ol>
+<li><strong>Apertura (Open Class 3).</strong> El docente Alejandro Urrea Ospina saludó y anunció que la clase arrancaba con un podcast compartido desde docencia sobre las normas APA. El podcast plantea que usar APA es "un pilar de la honestidad académica" y que hay que evitar tres cosas: la violación del derecho de autor, el plagio ("usar ideas ajenas como si fueran tuyas") y el autoplagio ("el de reutilizar trabajos propios sin decirlo").</li>
+<li><strong>Propósito del formato APA.</strong> La estandarización (márgenes de 2,54 cm, fuentes legibles como Times New Roman o Arial, doble espacio) busca "claridad" y "equidad": elimina el ruido visual para que "lo único que compite por la atención son las ideas" y "el contenido sea lo que se evalúe".</li>
+<li><strong>Cómo citar.</strong> Tres preguntas: "¿Quién lo dijo? El autor. ¿Cuándo lo dijo? El año. ¿Y dónde lo dijo? La página, si es textual." Dos formas: la cita narrativa (el autor es parte de la frase, "según Vargas 2009") y la parentética (referencia al final entre paréntesis); la clave es alternarlas para que el texto no se sienta "como una lista de datos". Regla de las 40 palabras: menos de 40 va entre comillas dentro del párrafo; más de 40 va "en un bloque aparte, con sangría y sin comillas", para decirle al lector "¡Ojo! Esta es la voz de otra persona, sin filtros". En el parafraseo "no es obligatorio poner el número de página".</li>
+<li><strong>Foro de la semana 3 (anuncio).</strong> "recuerden que el foro de la semana 3 es de manera colaborativa"; quienes no puedan participar grupalmente "me envían un correo para yo poderlos calificar de manera individual".</li>
+<li><strong>Tema central: BIA [~] (transcrito "BI") y continuidad del negocio.</strong> Agenda del día: el análisis de impacto de negocio en la evaluación de riesgos, "la definición de sus objetivos de recuperación como son los RTO y los RPO", "esas estrategias de respaldo y recuperación", soluciones técnicas, "una replicación continua en sitios de recuperación", el plan de recuperación de desastres (DRP, transcrito "DLP") — "que de alguna manera lo estamos viviendo del 10 de agosto con el terremoto" — y "el monitoreo y el mantenimiento de mejora continua".</li>
+<li><strong>BIA en la práctica.</strong> Identificar procesos y macroprocesos "no solamente desde la parte de cómo hacen las cosas sino también desde la parte financiera, legal y reputacional" ("no podemos parar la empresa"). Primer paso: "tener un inventario de activos y procesos" (levantamiento de cada proceso: cómo se hace y quiénes lo hacen). Luego: valorar el impacto por activo/proceso, evaluar consecuencias financieras y legales, y priorizar riesgo alto/medio/bajo. Ejemplo: la panadería cuyo horno se daña ("es un proceso y es un activo importantísimo en el negocio").</li>
+<li><strong>RTO y RPO.</strong> RTO: "cuál es el tiempo máximo tolerable para la inactividad de un sistema de información" (ej.: 30 minutos). RPO: "el volumen máximo de datos que se pueden perder en horas y minutos" (ej.: 15 minutos). Son "unos umbrales" que dependen "del costo del negocio".</li>
+<li><strong>Caso aeropuerto El Dorado (del día anterior).</strong> Falla de radares: "en el Dorado se apagaron los radares, las pantallas" y "volver todo manual"; los pilotos navegaron con GPS e instrumentos de la aeronave y no hubo accidentes. En aviación el RTO es casi cero: "si un minuto perdido es mucho, porque esos aviones... pueden estar viajando a 900 kilómetros por hora". Perder los datos de los radares ilustra el RPO. Los aviones traen su propio radar en la punta (parte delantera) "que lo hace... moverse para todas las direcciones... es el que detecta toda la comunicación", aterrizan por instrumentos (neblina) y la contingencia fue "un sistema manual".</li>
+<li><strong>Respaldo y recuperación (anécdota del docente).</strong> Cuando fue jefe de nómina y de sistemas en una Secretaría de Educación (nómina en Access 2.0, años 1999-2001, ~2.000 docentes, cheques impresos en impresora de matriz de punto Epson 1170/LX300), hacía "backup cada ocho días. Los viernes a las cuatro de la tarde". Instaló un antivirus en el servidor Compaq ProLiant 3000 (discos duros en caliente, Windows NT4), el equipo se bloqueó y debía liquidar y pagar la nómina al día siguiente: "fue mi primer trasnochón y mi primer llorada". Con ayuda de la línea de Compaq (desinstalar el antivirus, apagar y intervenir) lo resolvió. Aprendizaje: "empecé a hacer backup todos los días. O sea, un respaldo diferencial todos los días a tal hora" y respaldo semanal llevando copia a la casa.</li>
+<li><strong>Evolución de los medios de respaldo.</strong> Tape backup [~] ("unos cassettes de cintas magnéticas", aún conserva en casa copias de hace más de 24 años) → DVD/RW (hasta ~4 GB) → memorias USB (18/64 GB) → hoy respaldo full gracias a la nube: "ya se utiliza el respaldo full. Gracias a que tenemos la nube, el Cloud Computing"; menciona Grafana, Prometheus y la parte de tecnologías de Microsoft/Azure.</li>
+<li><strong>Soluciones técnicas.</strong> VMware para "unos snapshots [~] rápidos para asegurar la consistencia de la aplicación" (snapshot en hardware, liberación rápida en crecimiento de datos, mapeo de respaldo); automatización de backups ("a ver, a las 4 hacemos backup, los viernes a las 5... ya eso automáticamente lo hace el sistema"; hoy con IA "se programan unos agentes"); encriptamiento de la información con "pruebas hash" para que "el contenido de un archivo no sea modificado"; pruebas de respaldo automatizadas; y video de cómo crear un laboratorio de recuperación de datos.</li>
+<li><strong>Replicación continua.</strong> Sincrónica ("online, de tiempo real") vs. asincrónica ("que hágame un vaca [~] [respaldo] los viernes a las 5 o a las 7 de la noche"). Caso Bancolombia: las caídas ocurren al instalar "un componente nuevo o una actualización" y la salida es "hacer una replicación asincrónica, o sea, volver a una versión anterior". La sincrónica son "inversiones mucho más robustas".</li>
+<li><strong>Orquestación del DRP.</strong> Primero definir el repositorio "de una manera distribuida, económica y segura" y los datos/procesos críticos del core. Tres capas: base (datos: velocidad, altura, geoposición), lógica ("esas cadenas de respaldos incrementales", producción transaccional) y estratégica (el plan de recuperación de desastres "aplicando todo el cumplimiento estricto del RTO y el RPO" [transcrito "RTO y el RTO" [~]]).</li>
+<li><strong>APP: Flightradar24 (caso aplicado).</strong> Ejemplo de capas y datos sincrónicos desde satélites: "Flightradar es una aplicación gratuita que se llama Flightradar24, donde nos permite mostrar o ver todos los aviones en el mundo en tiempo real"; de pago da la altura, acceso a la vista de cabina, "la hoja de vida del avión" y los vuelos del día. La usó para rastrear en tiempo real el vuelo de su esposa a Medellín.</li>
+<li><strong>Plan DRP paso a paso.</strong> "documentar los roles, los pasos y comunicación", tener claro el procedimiento, el alcance y los objetivos, "organizar el equipo de DR", los contactos de emergencia (ejemplo de la aeronáutica), procedimientos manuales, activación y escalamiento, y "la restauración de algunos sistemas críticos". También el procedimiento que hacen los pilotos antes de despegar ("no cheliz" [~], probablemente "checklist").</li>
+<li><strong>Simulacros.</strong> Además de la restauración periódica, hacer simulacros: los terremotos de estos días (temblor del lunes: el docente lo ubicó a las 4:17 a. m. y un estudiante, Edwin, a las 3:16 a. m., magnitud 5.6 en Chaparral, Tolima; a él lo despertaron "las alarmas de los Android") y también en informática: "en la parte de text, hacking [~], o sea el testing, que es lo que uno hace como los simulacros para la parte de penetración en sistemas de información... con el fin de tener una retroalimentación de esas lecciones aprendidas". Ejemplo de sistema sincrónico: "Android avisa 10 segundos antes de un terremoto".</li>
+<li><strong>Monitoreo y mejora continua.</strong> Tener claro "esas tasas de éxito de backups, los tiempos de restauración teniendo en cuenta... el RTO y RPO" y "los estados de replicación", la infraestructura, el inventario y los diagramas de red. Herramientas: "uno utiliza mucho lo que es Prometeos [~] [Prometheus] y Grafana" para monitorear "en tiempo real todos los datos de la empresa", también desde Azure en la nube.</li>
+<li><strong>Organización del foro y modalidades.</strong> "El foro está para todas las modalidades, ya sean examen, actividades, trabajo final" y "hasta esta semana ustedes pueden cambiar de modalidad". Las actividades de la semana ya fueron evaluadas. Estructura colaborativa: "hay un integrante que realizará la participación principal contestando de pronto las preguntas, hay otros dos integrantes que realizarán una retroalimentación de la participación de sus compañeros y otro realizarán una conclusión del foro"; "máximo son cinco integrantes, o sea mínimo tres, máximo cinco" (se puede trabajar de a dos). Rúbrica: pertenencia en las participaciones, capacidad de análisis de los datos con los compañeros y el abordaje de las preguntas según el laboratorio desarrollado.</li>
+<li><strong>Anexo del foro: laboratorio "recuperando datos con Kali Linux [~]" (transcrito "calilinus").</strong> Requisitos previos: descargar VirtualBox (recomendado) y el disco/imagen ISO de Kali Linux. "Esto sí no sirve ni en celular ni en tableta. Debe ser desde un computador de escritorio, desde un portátil." TestDisk [~] (transcrito "test DICS"/"testdix") paso a paso desde CGSecurity [~] con permisos de administrador: iniciar TestDisk, seleccionar el disco y el tipo de tabla, analizar las búsquedas de particiones, Deep Search [~] ("el que me va a permitir... conocer todos los cilindros del disco duro"), recuperar particiones (primarias, lógicas, extendidas o borradas), escribir las tablas de particiones, recuperación de archivos de particiones, y finalizar y verificar. Advertencia: "no escriban [~] en el disco afectado durante el proceso de recuperación" — contó el caso de un estudiante que no instaló la máquina virtual, "borró las particiones y borró toda la información de su computador": "deben instalar una máquina virtual... para poder hacer estos laboratorios".</li>
+<li><strong>Entregable del foro.</strong> "deben de hacer una presentación usando Canva [~] [transcrito "Campa"] en el cual capturen los pantallazos de los siete pasos desarrollando el taller", con bibliografía, respuestas a las preguntas y "las citas según las normas APA"; "van a utilizar las diapositivas que hacen en Canva [~] ahí en el foro". Sin evidencias la nota baja: "si yo veo que no hay imágenes... los pantallazos en el desarrollo del ejercicio... la nota va a ser más baja... ¿dónde están las evidencias?". Canva es gratuito (hasta una parte) y PowerPoint también se puede utilizar.</li>
+<li><strong>Demo en vivo.</strong> Instalación/uso de VirtualBox (una máquina virtual es "tener un computador donde puedo tener varios sistemas operativos", ej.: Windows, Kali Linux y Metasploitable [transcrito "MSLP" [~]]); compartió en el chat los videos de la presentación (de BIA a DRP) y un video propio de cómo instalar Kali Linux desde una imagen ISO; arrancó Kali (usuario "uniminuto"), inició sesión como root/administrator, abrió la terminal root y ejecutó <code>sudo testdisk</code> para seguir la guía (crear registro, seleccionar disco, analizar, seleccionar partición, Deep Search). La VM se puso lenta por conflicto de recursos al compartir pantalla (tres pantallas, tarjeta gráfica gamer); "mató" el proceso y reinició.</li>
+<li><strong>Aporte de un estudiante (Juan)</strong>, que ya había hecho el taller durante la semana: recomendó "hacer una partición previa porque... Kali [~] no viene con eso" y contó dificultades con GPT (transcrito "FGPG" [~]) y el formato de la partición (probó FAT32; se mencionó NTFS). El docente le autorizó presentar solo ("tiene su autorización, no necesita enviarme un correo").</li>
+<li><strong>Trabajo en clase (25 min) y cierre.</strong> "voy a dar... 25 minutos para que interactúen... empiecen a instalar VirtualBox [~], empiecen a instalar [Kali] y empiecen a interactuar en el foro... Esto es más de laboratorio y más de práctica." Señaló en vivo el grupo de Edu, Terry, María Diana, Daniel, Gerardo, Hermia [~] y Luis Carlos. Despedida: "espero que les haya rendido... estaré atento a lo que requiera... les deseo una feliz noche, Dios los bendiga".</li>
+</ol>
+<h3>Actividades que dejó el profesor</h3>
+<ol>
+<li><strong>Foro de la semana 3 — laboratorio colaborativo (mínimo 3, máximo 5 integrantes).</strong> Instrucciones textuales del docente:</li>
+</ol>
+<ul>
+<li>"este foro de la semana 3 es laboratorio. Yo les voy a dar ahorita tiempo para que empiecen a trabajar."</li>
+<li>Pregunta 1 del foro: "¿Cómo enfrentaría los problemas encontrados durante el proceso de recuperación de datos con test DICS [~] [TestDisk]?" y "Mencionen si algún paso de los realizados puede ser más complicado o cómo lo solucionó si durante la análisis [~] del taller se presentó falta de reconocimiento de particiones o errores en el anexo. Menciona estrategias para solucionarlo."</li>
+<li>Pregunta 2 del foro: "¿qué estrategias empleó para garantizar que los datos recuperados fueran íntegros y completos? mencione los métodos utilizados para verificar la integridad de los archivos recuperados y las precauciones tomadas para evitar la sobrescritura de datos en el proceso de recuperación."</li>
+<li>Laboratorio: instalar VirtualBox, instalar Kali Linux [~] desde su imagen ISO y ejecutar TestDisk [~] siguiendo el paso a paso del anexo, en máquina virtual ("deben instalar una máquina virtual... para poder hacer estos laboratorios").</li>
+<li>Evidencias: "ustedes jueguen, interactúen y copien esos pantallazos y los lleven al foro"; "deben de hacer una presentación usando Canva [~] en el cual capturen los pantallazos de los siete pasos desarrollando el taller. Ahorre [~] la bibliografía... conteste las preguntas, recuerden las citas según las normas APA y listo. Y van a utilizar las diapositivas que hacen en Canva [~] ahí en el foro."</li>
+<li>Roles en el foro: "hay un integrante que realizará la participación principal contestando de pronto las preguntas, hay otros dos integrantes que realizarán una retroalimentación de la participación de sus compañeros y otro realizarán una conclusión del foro."</li>
+<li>Fecha: no se fijó fecha explícita en la transcripción (corresponde al foro de la semana 3).</li>
+</ul>
+<ol>
+<li><strong>Excepción para evaluación individual del foro:</strong> "las personas que no pueden participar de manera grupal... me envían un correo para yo poderlos calificar de manera individual"; quien no avise "va a ser evaluado como si fuera grupal".</li>
+<li><strong>Ver los videos compartidos en el chat:</strong> los de la presentación (de BIA a DRP), el video de cómo instalar Kali Linux desde una imagen ISO (grabado por el docente) y los videos paso a paso (TestDisk, laboratorio de recuperación de datos, VMware): "Lo que voy a hacer ahorita es compartirle los videos en el chat, para que tengan un acceso directo y lo puedan revisar."</li>
+<li><strong>Cambio de modalidad (solo hasta esta semana):</strong> "hasta esta semana ustedes pueden cambiar de modalidad" (examen, actividades o trabajo final).</li>
+<li><strong>APP a explorar — Flightradar24:</strong> dijo textualmente: "Flightradar es una aplicación gratuita que se llama Flightradar24, donde nos permite mostrar o ver todos los aviones en el mundo en tiempo real", y luego: "ustedes lo pueden descargar".</li>
+</ol></div>
 </details>
 </main><footer>Generado en GitHub Actions — descarga web/index.html y ábrelo</footer></body></html>
