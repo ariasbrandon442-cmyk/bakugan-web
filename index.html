@@ -33,7 +33,7 @@ details[open] summary{border-bottom:1px solid var(--line)}
 El robot transcribe, escribe las notas y esta web se actualiza sola (sin usar tu PC).</p>
 <div class="fila">
 <select id="cls"><option value="ingles">Inglés</option><option value="ntec">Nuevas Tecnologías</option><option value="hack">Ethical Hacking</option></select>
-<input id="url" type="text" placeholder="https://us02web.zoom.us/rec/play/..."></div>
+<input id="url" type="text" placeholder="https://us02web.zoom.us/rec/play/..." oninput="linea()"></div>
 <div class="fila">
 <button onclick="enviar()">🚀 Enviar y procesar</button>
 <button class="sec" onclick="copiar()">📋 Copiar línea</button>
