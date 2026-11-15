@@ -29,22 +29,45 @@ details[open] summary{border-bottom:1px solid var(--line)}
 
 <div class="nuevo">
 <h2>➕ Nueva clase</h2>
-<p>Pega el link de la grabación (Zoom), elige la materia y pulsa <strong>Copiar línea</strong>.
-Luego pega esa línea en <code>links.txt</code> de GitHub (el botón lo abre) y guarda:
-el robot la transcribe y la web se actualiza sola.</p>
+<p>Pega el link de la grabación (Zoom), elige la materia y pulsa <strong>Enviar y procesar</strong>.
+El robot transcribe, escribe las notas y esta web se actualiza sola (sin usar tu PC).</p>
 <div class="fila">
 <select id="cls"><option value="ingles">Inglés</option><option value="ntec">Nuevas Tecnologías</option><option value="hack">Ethical Hacking</option></select>
-<input id="url" type="text" placeholder="https://us02web.zoom.us/rec/play/..." oninput="linea()">
-</div>
-<code id="salida">—</code>
+<input id="url" type="text" placeholder="https://us02web.zoom.us/rec/play/..."></div>
 <div class="fila">
-<button onclick="copiar()">📋 Copiar línea</button>
-<button class="sec" onclick="window.open('https://github.com/ariasbrandon442-cmyk/bakugan-cloud/edit/main/links.txt','_blank')">Abrir links.txt en GitHub ↗</button>
+<button onclick="enviar()">🚀 Enviar y procesar</button>
+<button class="sec" onclick="copiar()">📋 Copiar línea</button>
+<button class="sec" onclick="window.open('https://github.com/ariasbrandon442-cmyk/bakugan-cloud/edit/main/links.txt','_blank')">Manual (GitHub) ↗</button>
 </div>
+<code id="salida" style="display:none"></code>
+<p id="estado" style="margin-top:10px">…</p>
 </div>
 <script>
+var WOR="https://bakugan-api.gestorweb-api.workers.dev";
 function linea(){var c=document.getElementById('cls').value,u=document.getElementById('url').value.trim();document.getElementById('salida').textContent=(u?c+'|'+u:'—')}
 function copiar(){var t=document.getElementById('salida').textContent;if(t==='—')return;navigator.clipboard.writeText(t)}
+function enviar(){
+  var c=document.getElementById('cls').value,u=document.getElementById('url').value.trim();
+  if(!u){aviso('Escribe el link primero');return}
+  aviso('Enviando…');
+  fetch(WOR+'/nueva-clase',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({clase:c,url:u})})
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.ok){aviso('✅ En cola: '+d.mensaje+'. En unos minutos recarga esta página y aparecerá abajo.');document.getElementById('url').value='';linea()}
+    else{aviso('⚠️ '+d.error)}
+  })
+  .catch(function(){aviso('⚠️ No pude contactar el robot; usa el botón Manual (GitHub)')})
+}
+function aviso(t){document.getElementById('estado').textContent=t}
+function estado(){
+  fetch(WOR+'/estado').then(function(r){return r.json()}).then(function(d){
+    if(d.ok&&d.status==='completed'&&d.conclusion==='success')aviso('🤖 Robot activo — última tarea terminó bien ('+d.created.slice(0,10)+')')
+    else if(d.ok&&d.status==='in_progress')aviso('⏳ El robot está procesando ahora mismo…')
+    else if(d.ok&&d.conclusion==='failure')aviso('⚠️ La última tarea falló; avísame en el chat')
+    else aviso('')
+  })
+}
+estado();
 </script>
 
 <h2>Inglés A2</h2>
