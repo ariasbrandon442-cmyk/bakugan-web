@@ -24,7 +24,7 @@ details[open] summary{border-bottom:1px solid var(--line)}
 .nuevo code{display:block;background:var(--bg);border-radius:8px;padding:8px 10px;font-size:14px;word-break:break-all}
 </style></head><body>
 <header><h1>bakugan-class</h1><p>Clases UNIMINUTO — transcripción, notas, foros y prompts</p>
-<p>Generado 15-Nov-2026 · 9/9 clases transcritas · 13 documentos</p></header>
+<p>Generado 16-Nov-2026 · 9/9 clases transcritas · 14 documentos</p></header>
 <main>
 
 <div class="nuevo">
@@ -13056,45 +13056,33 @@ estado();
 </details>
 <details open><summary>Notas de clase — Nuevas Tecnologías 13 nov 2026</summary>
 <div class="doc"><h3>Clase Nuevas Tecnologías (UNIMINUTO) — 13 nov 2026</h3>
-<p><strong>Fuente:</strong> transcripción Groq whisper‑large‑v3‑turbo; notas redactadas por IA (lo dudoso va con <strong>[~]</strong>).</p>
+<p><strong>Fuente:</strong> transcripción Groq whisper-large‑v3‑turbo; notas redactadas por IA (lo dudoso va con [~]).</p>
 <h3>Resumen de la clase</h3>
 <ol>
-<li><strong>Validación de software y estrategias de pruebas</strong> – conceptos básicos de QA y CUA aplicados con IA.</li>
-<li><strong>Pruebas unitarias</strong> – ejemplo: validar que un correo contenga “un arroba y que después del arroba venga un dominio… que ese correo exista”.</li>
-<li><strong>Pruebas de integración</strong> – formulario conectado al DOM y a la base de datos; caso de registro exitoso.</li>
-<li><strong>Pruebas funcionales y de aceptación</strong> – “cuando se hace un registro exitoso… el formulario enlazó con la base de datos… queda completamente registrado”.</li>
-<li><strong>Pirámide de pruebas</strong> – unitarias → integración → funcionales → aceptación.</li>
-<li><strong>Herramientas de testing</strong> – “JUnit”, “PyTest”, “Selenium”, “Postman”, “PlayGray” (y se menciona “JMeter” aunque no se ha manejado).</li>
-<li><strong>Frameworks específicos</strong> – <em>PlayGray</em> (E2C web), <em>Bytes</em> (unitarias e integración), <em>Cypress</em> y <em>Selenium</em> (vigentes).</li>
-<li><strong>Uso de IA en pruebas</strong> – la IA puede “generar casos, datos de prueba, escribe pruebas unitarias, propone casos de borde… arregla un test cambiando el resultado esperado”.</li>
-<li><strong>Modelos de IA empleados</strong> – Fable, Antropic y modelos <em>CLOUD, Opus, Sonet, Gemini (Argon, Irogen, Orchestrator, 3.8 Flash)</em>.</li>
-<li><strong>Agentes y conectores NCP</strong> – agente <em>Playground</em> genera pruebas y se conecta a Gmail, Excel, Blender, etc., mediante conectores NCP y <em>Cloud Code</em>.</li>
-<li><strong>Plataformas de IA para pruebas</strong> – <strong>Neumotron</strong> [~] y <strong>Huguenface</strong> [~].</li>
-<li><strong>Entorno de desarrollo “Antigravity”</strong> – <em>Antigravity App</em> (versión 1.0, 2.0 y actual), incluye <strong>Cloud Code</strong>, <strong>Coex</strong> y funciona como VS Code con extensiones.</li>
-<li><strong>Instalación y configuración</strong> – instalar <em>Antigravity</em> y <em>Cloud Code</em> desde la misma página; configurar IDE para usar JIT, NPM y permisos necesarios.</li>
-<li><strong>Gestión de código y versiones</strong> – usar <strong>Git</strong> y <strong>GitHub</strong>; conectar repositorio con Netlify para despliegue automático.</li>
-<li><strong>Plataformas de hosting y despliegue</strong> – “Latinoamérica Hosting” (hosting compartido), <strong>Docker</strong>, <strong>Kubernetes</strong>, <strong>AWS</strong>, <strong>Azure</strong>, <strong>Google Cloud</strong>, <strong>cPanel con Rocky Linux</strong>; despliegue en <strong>Netlify</strong> (arrastrar archivo comprimido, token en Antigravity).</li>
-<li><strong>Estrategias de despliegue</strong> – evitar “Bitbang”; usar “rolling”, “blue‑green” y “Canary”.</li>
-<li><strong>Plan de pruebas y requisitos</strong> – RF01, RF02; casos de prueba CP01, CP02; “el plan de pruebas al landing”.</li>
-<li><strong>Caso de estudio práctico</strong> – generar un <em>landing page</em> (HTML, CSS, JavaScript) con secciones: inicio, sobre mí, habilidades, tres proyectos, contacto; responsivo y accesible.</li>
-<li><strong>Procedimiento de creación</strong> – crear carpeta <strong>landing page</strong> (sin espacios, preferiblemente en mayúsculas); usar prompts para que el agente genere código.</li>
-<li><strong>Pruebas automatizadas en el navegador</strong> – abrir Chrome en modo debugging, IA coloca datos válidos/ inválidos, verifica responsividad, abre consola y ejecuta <code>console.log</code> para detectar errores.</li>
+<li><strong>Confusión de numeración:</strong> se plantea la pregunta “¿Por qué la presentación se llama <em>Sesión 3, Validación de Software y Estrategias de Pruebas</em>?”【~】.</li>
+<li><strong>Problemas de plataforma:</strong> fallas de Microsoft y desfase de semanas; dificultades con credenciales y acceso a la clase.</li>
+<li><strong>Tipos de pruebas y pirámide de pruebas:</strong> pruebas unitarias → integración → funcionales → aceptación; se describen pruebas unitarias, de integración, funcionales y de aceptación.</li>
+<li><strong>Ejemplo de prueba funcional de correo:</strong> “valía un correo… valida que tenga un arroba y que después del arroba venga un dominio… que ese correo exista”.</li>
+<li><strong>Herramientas de testing:</strong> JUnit (Java), PyTest (Python), Selenium, Postman (APIs), PlayGray, JMeter (mencionado aunque no usado).</li>
+<li><strong>Entorno de despliegue:</strong> Docker, Kubernetes, “serverlets”, AWS, Azure, Google Cloud y hosting compartido (ej. “Latinoamérica Hosting”).</li>
+<li><strong>Control de versiones y repositorios:</strong> “JIT es el sistema de control de versiones y Github es como la red social donde la gente sube sus desarrollos”.</li>
+<li><strong>IDE y extensiones basadas en VS Code:</strong> Visual Code, Cursor, Antigravity, Kiro y Codex (usado en la clase anterior).</li>
+<li><strong>Estrategias de despliegue:</strong> Bitbang (alto riesgo) [~], rolling, blue‑green y Canary; se advierte que “la Bitban… se debe evitar”.</li>
+<li><strong>Uso de IA para pruebas:</strong> la IA genera casos de prueba, escribe pruebas unitarias, propone casos de borde y puede ejecutar pruebas automáticamente “como lo hace Selenium”.</li>
+<li><strong>Instrucción del profesor sobre portafolio:</strong> “si quiero que me conozcan debo tener un portafolio de servicio y debo subirlo sí o sí a GitHub”.</li>
+<li><strong>Recomendación de hosting:</strong> “recomiendo… Latinoamérica Hosting” para entornos con facturación electrónica y recursos compartidos.</li>
+<li><strong>Frameworks y herramientas de pruebas mencionados:</strong> PlayGray, Bytes (para pruebas unitarias e integración), Cypress y Selenium.</li>
+<li><strong>Agentes de IA y NCP:</strong> “Ya se están utilizando agentes de IA… Playground… genera las pruebas y me entrega el resultado”. Los NCP requieren “conectores con herramientas externas” (ej. Gmail, Excel, Blender).</li>
+<li><strong>Caso de estudio:</strong> “el caso de estudio es generar un <em>landing page</em> para ofrecer nuestros servicios profesionales como ingeniero”.</li>
+<li><strong>Antigravity IDE / Antigravity App:</strong> se diferencia entre “Antigravity IDE” (recomendable para desarrolladores) y “Antigravity app”; descarga similar a Visual Code con plugins como “Cloud Code”.</li>
+<li><strong>Estructura del proyecto:</strong> “crear una carpeta… se va a llamar <em>landing page</em>” y “arrastrar la carpeta al interior del Antigravity”.</li>
+<li><strong>Ingeniería del PROMPT:</strong> usar prompts como “hazme un landing page en HTML, CSS, JavaScript… con sección de inicio, sobre mí, habilidades, tres proyectos, contacto… que sea responsivo y accesible”.</li>
+<li><strong>Requisitos de la página:</strong> responsiva, accesible, tamaño de letras adecuado, validación del formulario (incluyendo correo con y sin arroba).</li>
+<li><strong>Plan de pruebas y ejecución:</strong> el agente genera un “implementation plan” que debe ser “aprobar el plan” antes de continuar; incluye pruebas de validaciones, unitarias, funcionales y de estrés. Se ejecutan desde la terminal (p. ej. “le leo el prompt que decía en landing crea la función validar correo” y la IA “arranca automáticamente” los tests).</li>
 </ol>
-<p>&gt; <strong>Instrucciones textuales citadas</strong></p>
-<p>&gt; - “la actividad evaluativa es tenerse conversatorio” (línea 172‑173)</p>
-<p>&gt; - “se abre la actividad y ya, se amplía el plazo” (línea 159)</p>
-<p>&gt; - “Abrimos con la vocatoria cada dos meses” (líneas 61‑62)</p>
+<p><em>(Se mantuvo el orden lógico de los conceptos, herramientas y ejemplos tal como aparecen en la transcripción.)</em></p>
 <h3>Actividades que dejó el profesor</h3>
-<ol>
-<li><strong>Conversatorio evaluativo</strong> – entregar evidencia del conversatorio. <strong>Fecha límite:</strong> por confirmar (se ampliará el plazo).</li>
-<li><strong>Subir diapositivas</strong> – el profesor subirá las diapositivas de la clase. <strong>Fecha límite:</strong> 14 nov 2026 (máximo “mañana”).</li>
-<li><strong>Habilitación de examen</strong> – el examen será habilitado. <strong>Fecha límite:</strong> 14 nov 2026 (se indica “te la habilito mañana”).</li>
-<li><strong>Convocatoria de becas/descuentos</strong> – abrir la vocatoria cada dos meses. <strong>Próxima apertura:</strong> según calendario institucional (bimestral).</li>
-<li><strong>Entrega del landing page</strong> – crear y subir el proyecto <em>landing page</em> a GitHub. <strong>Fecha límite:</strong> 30 nov 2026 (un mes de holgura para pruebas).</li>
-<li><strong>Plan de pruebas y QA</strong> – elaborar y subir el plan de pruebas (RF01, RF02, CP01, CP02). <strong>Fecha límite:</strong> 30 nov 2026.</li>
-<li><strong>Ampliación de plazo de actividad</strong> – la actividad ya está abierta y el plazo será ampliado. <strong>Fecha de nueva entrega:</strong> por confirmar.</li>
-<li><strong>No se identificaron actividades nuevas en la transcripción.</strong> <em>(si alguna de las anteriores se considera duplicada, se omite)</em>.</li>
-</ol></div>
+<p>No se identificaron actividades nuevas en la transcripción.</p></div>
 </details>
 <details open><summary>Notas de clase — Nuevas Tec 30 oct</summary>
 <div class="doc"><h3>Clase Nuevas Tecnologías de Desarrollo (NRC 70121) — 30-oct-2026</h3>
@@ -13270,6 +13258,65 @@ estado();
 <li>Ideas de app de los estudiantes quedan "en el tintero" como base posible</li>
 </ol>
 <p>del trabajo de la cátedra.</p></div>
+</details>
+<details open><summary>Prompt IA — Nuevas Tecnologías 13 nov 2026</summary>
+<div class="doc"><h3>Prompt IA — Nuevas Tecnologías (UNIMINUTO) — 13 nov 2026</h3>
+<h3>Tarea detectada</h3>
+<p>El profesor solicitó que <strong>desarrollemos una landing page</strong> que ofrezca nuestros servicios profesionales como ingeniero, con las secciones “inicio”, “sobre mí”, “habilidades”, “tres proyectos” y “contacto”, que sea <strong>responsiva y accesible</strong>, que incluya <strong>validación del formulario</strong> (especialmente del correo con arroba y dominio) y que <strong>generemos y ejecutemos un plan de pruebas</strong> (unitarias, de integración, funcionales, de aceptación y de estrés) usando IA. Además, debemos <strong>crear el proyecto en Antigravity IDE</strong>, <strong>subirlo a GitHub</strong> y <strong>desplegarlo en Netlify</strong>. No se especificaron fechas exactas de entrega, aunque el profesor comentó que “me comprometo a subírselas a más tardar mañana” [~].</p>
+<h3>PROMPT LISTO PARA COPIAR</h3>
+<p>&gt; <strong>Contexto:</strong> En la clase de “Validación de Software y Estrategias de Pruebas” (Sesión 3) el profesor explicó tipos de pruebas, la pirámide de pruebas, uso de IA para generar casos de prueba y mostró cómo crear y desplegar una landing page usando Antigravity IDE, GitHub y Netlify.</p>
+<p>&gt;</p>
+<p>&gt; <strong>Tarea:</strong></p>
+<p>&gt; 1. <strong>Crear una landing page</strong> en HTML, CSS y JavaScript con las siguientes secciones:</p>
+<p>&gt;    - Inicio</p>
+<p>&gt;    - Sobre mí</p>
+<p>&gt;    - Habilidades</p>
+<p>&gt;    - Tres proyectos (con descripción breve y enlace)</p>
+<p>&gt;    - Contacto (formulario).</p>
+<p>&gt; 2. <strong>Requisitos de la página:</strong></p>
+<p>&gt;    - Diseño responsivo (compatible con móvil, tablet y escritorio).</p>
+<p>&gt;    - Accesibilidad (uso de ARIA, contraste adecuado, navegación por teclado).</p>
+<p>&gt;    - Validación del formulario:</p>
+<p>&gt;        - Campo de correo debe contener “@” y un dominio válido; validar también casos sin arroba.</p>
+<p>&gt;        - Otros campos con validaciones básicas (obligatorios, longitud).</p>
+<p>&gt; 3. <strong>Estructura del proyecto:</strong></p>
+<p>&gt;    - Crear una carpeta llamada <code>landing-page</code>.</p>
+<p>&gt;    - Dentro, incluir <code>index.html</code>, <code>styles.css</code>, <code>app.js</code> y un <code>README.md</code>.</p>
+<p>&gt;    - Añadir un archivo <code>.gitignore</code> y hacer el primer commit con JIT.</p>
+<p>&gt; 4. <strong>Control de versiones:</strong></p>
+<p>&gt;    - Inicializar repositorio Git, subirlo a GitHub (crear repositorio público/privado según prefiera).</p>
+<p>&gt;    - En el README, incluir descripción del proyecto y enlace a la demo.</p>
+<p>&gt; 5. <strong>Pruebas automatizadas:</strong></p>
+<p>&gt;    - Usar IA (por ejemplo, ChatGPT, Gemini o el agente de pruebas de Antigravity) para generar:</p>
+<p>&gt;        - Pruebas unitarias (p. ej. función <code>validarCorreo</code>).</p>
+<p>&gt;        - Pruebas de integración (interacción del formulario con el DOM).</p>
+<p>&gt;        - Pruebas funcionales (envío de formulario con datos válidos e inválidos y verificación de mensajes de error).</p>
+<p>&gt;        - Pruebas de aceptación (flujo completo de envío exitoso).</p>
+<p>&gt;        - Pruebas de estrés (simular múltiples envíos simultáneos).</p>
+<p>&gt;    - Ejecutar los tests desde la terminal (usando Jest, PyTest, o el framework que prefiera) y documentar resultados.</p>
+<p>&gt; 6. <strong>Despliegue:</strong></p>
+<p>&gt;    - Conectar el repositorio GitHub a Netlify.</p>
+<p>&gt;    - Arrastrar el proyecto (o subir el zip) a Netlify para generar un dominio automático.</p>
+<p>&gt;    - Verificar que la página funciona en modo “debugging” de Chrome y que los tests se pueden ejecutar en el navegador.</p>
+<p>&gt; 7. <strong>Entrega:</strong></p>
+<p>&gt;    - Enviar el enlace de GitHub y el dominio de Netlify al profesor (por correo o la plataforma de la asignatura).</p>
+<p>&gt;    - Adjuntar el informe del plan de pruebas con resultados y observaciones.</p>
+<p>&gt;</p>
+<p>&gt; <strong>Formato/Entrega:</strong></p>
+<p>&gt; - Archivo <code>README.md</code> con instrucciones de instalación y ejecución.</p>
+<p>&gt; - Informe de pruebas en PDF o Markdown.</p>
+<p>&gt; - Enlace a GitHub y a la página desplegada.</p>
+<p>&gt;</p>
+<p>&gt; <strong>Fecha límite:</strong> No se indicó una fecha exacta; el profesor mencionó “subirlo a más tardar mañana” [~].</p>
+<p>&gt;</p>
+<p>&gt; <strong>Nota final:</strong> Si algo no está claro, pregúntame antes de empezar.</p>
+<h3>No hacer</h3>
+<ul>
+<li>No inventar fechas de entrega diferentes a las indicadas por el profesor.</li>
+<li>No agregar funcionalidades que no fueron solicitadas (p. ej. blog, tienda online, bases de datos).</li>
+<li>No omitir la validación del correo ni los requisitos de accesibilidad y responsividad.</li>
+<li>Nada extra.</li>
+</ul></div>
 </details>
 <h2>Ethical Hacking</h2>
 <details open><summary>Ethical Hacking — 23 oct 2026</summary>
